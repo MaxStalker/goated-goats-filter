@@ -1,5 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import inject from '@rollup/plugin-inject'
+import polyfill from '@esbuild-plugins/node-modules-polyfill'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,5 +14,12 @@ export default defineConfig({
       https: 'https-browserify',
     }
   },
-  plugins: [react()]
+  plugins: [react()],
+  build: {
+    rollupOptions: {
+      plugins: [
+        polyfill()
+      ],
+    },
+  },
 })
