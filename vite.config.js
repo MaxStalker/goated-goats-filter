@@ -15,11 +15,21 @@ export default defineConfig({
     }
   },
   plugins: [react()],
-  build: {
+  optimizeDeps: {
+    include: [
+      "queue-microtask",
+      "@improbable-eng/grpc-web",
+      "@improbable-eng/grpc-web-node-http-transport",
+      "sha3",
+      "@onflow/protobuf",
+    ],
+    exclude: ["@onflow/fcl"],
+  },
+  /*build: {
     rollupOptions: {
       plugins: [
         polyfill()
       ],
     },
-  },
+  },*/
 })
