@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import inject from '@rollup/plugin-inject'
-import polyfill from '@esbuild-plugins/node-modules-polyfill'
+import rollupNodePolyFill from "rollup-plugin-node-polyfills"
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,10 +11,16 @@ export default defineConfig({
       util: 'util',
       http: 'stream-http',
       https: 'https-browserify',
+      buffer: 'buffer'
     }
   },
   plugins: [react()],
   optimizeDeps: {
+    esbuildOptions:{
+      define: {
+        global: "globalThis"
+      }
+    },
     include: [
       "queue-microtask",
       "@improbable-eng/grpc-web",
@@ -25,11 +30,11 @@ export default defineConfig({
     ],
     exclude: ["@onflow/fcl"],
   },
-  /*build: {
-    rollupOptions: {
-      plugins: [
-        polyfill()
-      ],
-    },
-  },*/
+  build:{
+    rollupOptions:{
+      plugins:[
+        rollupNodePolyFill()
+      ]
+    }
+  }
 })
