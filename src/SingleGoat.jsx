@@ -19,6 +19,7 @@ export default function SingleGoat(props) {
           return(
             <div key={trait.id}>
               <img src={trait.image} width="200px" />
+              <p>TraitScore: {trait.traitScore}</p>
             </div>
           )
         })
