@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import User from "./User";
 

@@ -9,7 +9,7 @@
       import process from 'process'
       import { Buffer } from 'buffer'
       import EventEmitter from 'events'
-      import queueMicrotask from 'queue-microtask'
+      import * as queueMicrotask from 'queue-microtask'
       import url from 'url'
 
       window.Buffer = Buffer

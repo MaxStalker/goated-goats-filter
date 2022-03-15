@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { useLocation, useParams, useMatch } from "react-router";
 import { getDisplay, GoatedGoats, GoatedTraits } from "flow-cadut/views";
