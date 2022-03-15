@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module">
+
+      import process from 'process'
+      import { Buffer } from 'buffer'
+      import EventEmitter from 'events'
+      import queueMicrotask from 'queue-microtask'
+      import url from 'url'
+
+      window.Buffer = Buffer
+      window.process = process
+      window.EventEmitter = EventEmitter
+      window.queueMicrotask = queueMicrotask
+      window.url = url
+
+      window.global = window
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

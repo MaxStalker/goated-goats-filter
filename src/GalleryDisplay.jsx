@@ -1,0 +1,105 @@
+import { useEffect, useState } from "react";
+import { Gallery, Checkbox, SelectorBox, Input } from "./Components";
+
+export default function GalleryDisplay(props) {
+  const { items, query, getRarity } = props;
+  const [selectedItems, setSelectedItems] = useState({});
+
+  const [filterSelected, setFilterSelected] = useState(false);
+  const [filteredItems, setFilterItems] = useState(items);
+  const [rarityFilters, setRarityFilters] = useState({
+    common: true,
+    rare: true,
+    epic: true,
+    legendary: true,
+  });
+  const toggleRarity = (key) => {
+    setRarityFilters({
+      ...rarityFilters,
+      [key]: !rarityFilters[key],
+    });
+  };
+
+  const [property, setPropertySearch] = useState("");
+
+  useEffect(() => {
+    let filtered = items;
+
+    // TODO: Optimize this :D
+    filtered = items.filter((item) => {
+      const rarity = getRarity(item);
+      return rarityFilters[rarity] && query(item, property);
+    });
+
+    if (filterSelected) {
+      filtered = filtered.filter((item) => selectedItems[item.id]);
+    }
+
+    setFilterItems(filtered);
+  }, [
+    filterSelected,
+    items,
+    selectedItems,
+    query,
+    property,
+    getRarity,
+    rarityFilters,
+  ]);
+
+  const toggleItem = (id) => {
+    setSelectedItems({
+      ...selectedItems,
+      [id]: !selectedItems[id],
+    });
+  };
+
+  const { renderItem } = props;
+  return (
+    <>
+      <SelectorBox>
+        <Checkbox
+          label="Common"
+          checked={rarityFilters.common}
+          onChange={() => toggleRarity("common")}
+        />
+        <Checkbox
+          label="Rare"
+          checked={rarityFilters.rare}
+          onChange={() => toggleRarity("rare")}
+        />
+        <Checkbox
+          label="Epic"
+          checked={rarityFilters.epic}
+          onChange={() => toggleRarity("epic")}
+        />
+        <Checkbox
+          label="Legendary"
+          checked={rarityFilters.legendary}
+          onChange={() => toggleRarity("legendary")}
+        />
+      </SelectorBox>
+      <SelectorBox>
+        <Input
+          value={property}
+          onChange={(e) => setPropertySearch(e.target.value)}
+        />
+      </SelectorBox>
+      <SelectorBox>
+        <Checkbox
+          label="Only Selected"
+          checked={filterSelected}
+          onChange={(checked) => setFilterSelected(checked)}
+        />
+      </SelectorBox>
+      <Gallery>
+        {filteredItems.map((item) =>
+          renderItem({
+            item,
+            onClick: () => toggleItem(item.id),
+            selected: !!selectedItems[item.id],
+          })
+        )}
+      </Gallery>
+    </>
+  );
+}
