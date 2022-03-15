@@ -19,9 +19,16 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
   padding: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 80vw;
+  margin: 0 auto;
+
+  @media (max-width: 480px) {
+    max-width: 100%;
+    margin: 1rem auto;
+  }
 `;
 
 export const Input = styled.input`
@@ -48,6 +55,10 @@ export const Gallery = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.5em;
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
 `;
 
 export const Image = styled.img`
@@ -58,12 +69,25 @@ export const Image = styled.img`
 `;
 
 export const Frame = styled.div`
-  width: 200px;
+  width: 100%;
   height: auto;
-  margin-bottom: 10px;
-  background-color: red;
+  margin-bottom: 16px;
   border-radius: 8px;
+  overflow: hidden;
   background: ${({ rarity }) => rarityToGradient(rarity)};
+  position: relative;
+`;
+
+export const Shadow = styled.div`
+  box-shadow: inset 0 0 8px 2px rgb(0 0 0 / 15%);
+  position: absolute;
+  border-radius: 8px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  pointer-events: none;
 `;
 
 const rarityToGradient = (rarity) => {
@@ -81,12 +105,26 @@ const rarityToGradient = (rarity) => {
   }
 };
 
+const getBgByRarity = rarity => {
+  switch (rarity) {
+    case "legendary":
+      return "#f2d1d9"
+    case "rare":
+      return "#d3f4ff"
+    case "epic":
+      return "#ecfff4"
+    default:
+      return "white"
+  }
+}
+
+
 export const PreviewContainer = styled.div`
   cursor: pointer;
   overflow: hidden;
   border-radius: 8px;
   padding: 20px;
-  background-color: white;
+  background-color: ${({rarity}) => getBgByRarity(rarity)};
 
   p {
     font-size: 18px;
@@ -94,6 +132,7 @@ export const PreviewContainer = styled.div`
   }
 
   outline: ${({ selected }) => (selected ? "2px solid #bbb" : "")};
+  box-shadow: 0 3px 12px rgb(0 0 0 / 15%), 0 0 0 1px rgb(222 222 229);
 `;
 
 export const TraitPreview = styled.div`
@@ -176,4 +215,8 @@ export const Tab = styled.div`
   justify-content: center;
   border-radius: 4px;
   cursor: pointer;
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
 `;
