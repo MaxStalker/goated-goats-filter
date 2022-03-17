@@ -22,10 +22,12 @@ export default function Goats(props) {
         );
       }}
       renderItem={({ item, onClick, selected }) => {
-        const skinName = getSkinName(item.metadata.skinFileName);
-        const skinPrice = goatsPrices[skinName]
-          ? goatsPrices[skinName].avaragePrice
+        const {skinFileName, skinRarity} = item.metadata
+        const skinName = getSkinName(skinFileName);
+        const skinPrice = goatsPrices[skinRarity]
+          ? goatsPrices[skinRarity][item.traitSlots - 5]
           : 0;
+        console.log({skinRarity, skinPrice})
         const traitsPrice = item.equippedTraits.reduce((acc, trait) => {
           let { rarity } = trait.metadata;
           rarity = rarity === "base" ? "common" : rarity;

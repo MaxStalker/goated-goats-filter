@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { getGoatPrices, getTraitPrices } from "../utils";
+import { getGoatPrices, getTraitPrices, getAdjustedGoatPrices } from "../utils";
 
 export const PricesContext = createContext({
   goatsPrices: {},
@@ -11,7 +11,8 @@ export const PriceProvider = ({ children }) => {
   const [traitsPrices, setTraitsPrices] = useState({});
 
   const fetchGoatPrices = async () => {
-    const goatsPrices = await getGoatPrices();
+    const goatsPrices = await getAdjustedGoatPrices();
+    console.log(goatsPrices)
     setGoatsPrices(goatsPrices);
   };
 
