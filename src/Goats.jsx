@@ -3,6 +3,7 @@ import GalleryDisplay from "./GalleryDisplay";
 import Goat from "./components/Goat";
 import { PricesContext } from "./context/prices";
 import { getSkinName } from "./utils";
+import { useLocation } from "react-router";
 
 export default function Goats(props) {
   const { goats } = props;
@@ -34,7 +35,6 @@ export default function Goats(props) {
           acc += parseFloat(price);
           return acc;
         }, 0);
-        console.log({ traitsPrice });
         const totalPrice = parseFloat(skinPrice) + traitsPrice;
         return (
           <Goat

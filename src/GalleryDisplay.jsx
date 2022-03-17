@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { Gallery, Checkbox, SelectorBox, Input } from "./Components";
+import { useLocation } from "react-router";
 
 export default function GalleryDisplay(props) {
+  const location = useLocation();
+  const { pathname, search } = location;
+
   const { items, query, getRarity } = props;
   const [selectedItems, setSelectedItems] = useState({});
 
@@ -20,7 +24,9 @@ export default function GalleryDisplay(props) {
     });
   };
 
-  const [property, setPropertySearch] = useState("");
+  const initialProperty = search.slice(1).split("=")[1];
+  console.log({ search, initialProperty, location });
+  const [property, setPropertySearch] = useState(initialProperty);
 
   useEffect(() => {
     let filtered = items;
@@ -81,7 +87,15 @@ export default function GalleryDisplay(props) {
       <SelectorBox>
         <Input
           value={property}
-          onChange={(e) => setPropertySearch(e.target.value)}
+          onChange={(e) => {
+            const search = e.target.value;
+            setPropertySearch(search);
+            window.history.pushState(
+              {},
+              undefined,
+              `${pathname}?search=${search}`
+            );
+          }}
         />
       </SelectorBox>
       <SelectorBox>
