@@ -92,7 +92,7 @@ export default function Goat(props) {
         </Values>
       </Content>
       <RarityContainer rarity={skinRarity}>
-        <Rarity rarity={skinRarity} className="pill">{skinRarity} {skinScore}</Rarity>
+        <Rarity rarity={skinRarity} className="pill">{skinRarity} {totalScore}</Rarity>
       </RarityContainer>
     </Container>
   );
