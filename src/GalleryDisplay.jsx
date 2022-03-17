@@ -24,7 +24,8 @@ export default function GalleryDisplay(props) {
     });
   };
 
-  const initialProperty = search.slice(1).split("=")[1];
+  const initialProperty = search.slice(1).split("=")[1] || "";
+  console.log({ initialProperty });
   console.log({ search, initialProperty, location });
   const [property, setPropertySearch] = useState(initialProperty);
 
