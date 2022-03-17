@@ -5,7 +5,6 @@ export default function SingleGoat(props) {
   const { goatId } = useParams();
 
   const goat = data[goatId];
-  console.log({ goat });
 
   return !goat ? (
     <div>No goat found...</div>
@@ -15,7 +14,6 @@ export default function SingleGoat(props) {
       <p>SkinScore: {goat.skinScore}</p>
       {
         goat.equippedTraits.map((trait)=>{
-          console.log({trait})
           return(
             <div key={trait.id}>
               <img src={trait.image} width="200px" />

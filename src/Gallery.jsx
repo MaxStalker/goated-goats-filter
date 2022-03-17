@@ -1,20 +1,14 @@
 import { Link } from "react-router-dom";
 import { Frame, Image, PreviewContainer, Meta, Shadow } from "./Components";
 import { useParams } from "react-router-dom";
+import { capitalize } from "./utils";
 
-const capitalize = (item) => item[0].toUpperCase() + item.slice(1);
-
-const getSkinName = (skinFile) => {
-  const name = skinFile.slice(5).slice(0, -4);
-  return name.split("_").map(capitalize).join(" ");
-};
-
-export const Goat = ({ goat, selected, onClick }) => {
+export const Goat = (props) => {
+  const { goat, selected, onClick, skinName,askPrice } = props;
   const { owner } = useParams();
   const { metadata, traitSlots, skinScore, traitsScore, equippedTraits, id } =
     goat;
   const skinRarity = capitalize(metadata.skinRarity);
-  const skinName = getSkinName(metadata.skinFileName);
   const imageAlt = `[${skinRarity}] ${skinName}`;
   const totalScore = skinScore + traitsScore;
   const meta = {
@@ -23,6 +17,7 @@ export const Goat = ({ goat, selected, onClick }) => {
     Slots: traitSlots,
     Equipped: equippedTraits.length,
     Score: totalScore,
+    AskPrice: askPrice.avaragePrice
   };
   const to = `/owners/${owner}/goat/${id}`;
   return (

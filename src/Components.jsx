@@ -2,9 +2,15 @@ import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+  html{
+    padding: 0;
+    margin: 0;
+  }
   body {
     font-family: sans-serif;
-    background-color: rgb(244,244,250);
+    background-color: #e0e3e1;
+    padding: 0;
+    margin: 0;
   }
 
   * {
@@ -17,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  padding: 10px;
+  padding: 2rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;

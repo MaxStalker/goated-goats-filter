@@ -7,9 +7,11 @@ import { FIND } from "flow-cadut/plugins/FIND";
 import * as fcl from "@onflow/fcl";
 import Traits from "./Traits";
 import Goats from "./Goats";
-import { Tab, Tabs } from "./Components";
+import { Container, Tab, Tabs } from "./Components";
 import SingleGoat from "./SingleGoat";
 import SingleTrait from "./SingleTrait";
+import { PricesContext } from "./context/prices";
+import PriceChart from "./components/PriceChart";
 
 const setup = async () => {
   await setEnvironment("mainnet");
@@ -20,22 +22,22 @@ const setup = async () => {
   fcl.config().put("discovery.wallet", "https://flow-wallet.blocto.app/authn"); // Configure FCL's Wallet Discovery mechanism
 };
 
-export default function User(props) {
+export default function User() {
   const { owner } = useParams();
   const { pathname } = useLocation();
 
   const [goats, setGoats] = useState([]);
   const [goatsDictionary, setGoatsDictionary] = useState({});
+
   const [traits, setTraits] = useState([]);
   const [traitsDictionary, setTraitsDictionary] = useState({});
+
   const [loading, setLoading] = useState(false);
 
   const fetchDisplay = async (address) => {
     await setup();
-    console.log("fetch for ", address);
     setLoading(true);
     try {
-      console.log("fetching...");
       const { GoatedGoats: goats = [], GoatedTraits: traits = [] } =
         await getDisplay([GoatedGoats, GoatedTraits], address);
 
@@ -65,8 +67,34 @@ export default function User(props) {
     fetchDisplay(owner);
   }, [owner]);
 
+  const sortedGoats = goats.sort((a, b) => {
+    const aScore = a.skinScore + a.traitsScore;
+    const bScore = b.skinScore + b.traitsScore;
+
+    if (aScore < bScore) {
+      return 1;
+    }
+    if (aScore > bScore) {
+      return -1;
+    }
+    return 0;
+  });
+
+  const sortedTraits = traits.sort((a, b) => {
+    const aScore = a.rarityScore;
+    const bScore = b.rarityScore;
+
+    if (aScore < bScore) {
+      return 1;
+    }
+    if (aScore > bScore) {
+      return -1;
+    }
+    return 0;
+  });
+
   return (
-    <>
+    <Container>
       <Tabs>
         <Tab active={pathname.includes("/goats")}>
           <Link to={"goats"}>Goats</Link>
@@ -75,10 +103,11 @@ export default function User(props) {
           <Link to={"traits"}>Traits</Link>
         </Tab>
       </Tabs>
+      <PriceChart />
       {loading && <p>Please wait, fetching data...</p>}
       <Routes>
-        <Route path="goats" element={<Goats goats={goats} />} />
-        <Route path="traits" element={<Traits traits={traits} />} />
+        <Route path="goats" element={<Goats goats={sortedGoats} />} />
+        <Route path="traits" element={<Traits traits={sortedTraits} />} />
         <Route
           path="/goat/:goatId"
           element={<SingleGoat data={goatsDictionary} />}
@@ -88,6 +117,6 @@ export default function User(props) {
           element={<SingleTrait data={traitsDictionary} />}
         />
       </Routes>
-    </>
+    </Container>
   );
 }

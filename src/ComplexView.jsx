@@ -8,7 +8,6 @@ import GalleryDisplay from "./GalleryDisplay";
 import * as fcl from "@onflow/fcl";
 
 const setup = async () => {
-  console.log("setup!");
   await setEnvironment("mainnet");
   await registerPlugin(FIND);
 
@@ -45,13 +44,10 @@ export default function App() {
   const [user, setUser] = useState(null);
 
   const fetchDisplay = async (address) => {
-    console.log("fetch for ", address);
     setLoading(true);
     try {
-      console.log("fetching...");
       const { GoatedGoats: goats = [], GoatedTraits: traits = [] } =
         await getDisplay([GoatedGoats, GoatedTraits], address);
-      console.log({ goats, traits });
       setGoats(goats || []);
       setTraits(traits || []);
     } catch (e) {
@@ -70,7 +66,6 @@ export default function App() {
         <button
           onClick={async () => {
             const activeUser = await fcl.logIn();
-            console.log({ activeUser });
             if (activeUser.addr) {
               setUser(activeUser);
               fetchDisplay(activeUser.addr);
