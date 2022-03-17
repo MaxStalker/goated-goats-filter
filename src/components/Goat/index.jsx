@@ -1,3 +1,4 @@
+import {useContext} from "react";
 import {
   Container,
   GoatName,
@@ -13,12 +14,13 @@ import {
   SlotsContainer,
   SlotsRow,
 } from "./components";
-import Slot from "../Slot"
+import Slot from "../Slot";
 import { Link, useParams } from "react-router-dom";
-import { capitalize, getTraitName } from "../../utils";
-import { rarityColors } from "../../utils/colors";
+import { PricesContext } from "../../context/prices";
 
 export default function Goat(props) {
+  const { traitsPrices } = useContext(PricesContext);
+
   // Data formatting
   const { goat, selected, onClick, skinName, skinPrice, totalPrice } = props;
   const { owner } = useParams();
@@ -47,13 +49,16 @@ export default function Goat(props) {
 
   for (let i = 0; i < sortedTraits.length; i++) {
     const trait = sortedTraits[i];
+    console.log({trait, metadata: trait.metadata, traitsPrices})
+    const rarity = trait.metadata.rarity === "base" ? "common" : trait.metadata.rarity
     slots[i] = {
       equipped: true,
       ...trait,
+      price: traitsPrices[rarity].avaragePrice,
     };
   }
 
-  const mappedTraits = slots.map((slot,i) => <Slot {...slot} index={i}/>);
+  const mappedTraits = slots.map((slot, i) => <Slot {...slot} index={i} />);
 
   const split = slots.length / 2 + 1;
   let firstRow = mappedTraits;
@@ -62,7 +67,6 @@ export default function Goat(props) {
     firstRow = mappedTraits.slice(0, split);
     secondRow = mappedTraits.slice(split);
   }
-
 
   return (
     <Container onClick={onClick}>
@@ -92,7 +96,9 @@ export default function Goat(props) {
         </Values>
       </Content>
       <RarityContainer rarity={skinRarity}>
-        <Rarity rarity={skinRarity} className="pill">{skinRarity} {totalScore}</Rarity>
+        <Rarity rarity={skinRarity} className="pill">
+          {skinRarity} {totalScore}
+        </Rarity>
       </RarityContainer>
     </Container>
   );

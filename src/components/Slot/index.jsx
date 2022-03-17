@@ -1,5 +1,4 @@
-import { useRef, useState } from "react";
-import useMouse from "@react-hook/mouse-position";
+import { useRef, useState, useContext } from "react";
 import { getTraitName } from "../../utils";
 import {
   Container,
@@ -10,7 +9,7 @@ import {
   TraitName,
   Content,
 } from "./components";
-import { Rarity, RarityContainer } from "../Goat/components";
+import {Label, Rarity, RarityContainer, Value, ValueDisplay} from "../Goat/components";
 
 export default function Slot(props) {
   const ref = useRef(null);
@@ -19,7 +18,7 @@ export default function Slot(props) {
     return <Container ref={ref} title="Empty Slot" to="/" empty={true} />;
   }
 
-  const { metadata, image, traitScore, index } = props;
+  const { metadata, image, traitScore, price } = props;
   const { traitSlot, fileName, rarity } = metadata;
   const [showToolTip, setShowTooltip] = useState(false);
 
@@ -80,12 +79,13 @@ export default function Slot(props) {
             </PreviewContainer>
             <Content>
               <TraitName>{title}</TraitName>
-              <TraitScore>
-                Score: <b>{traitScore}</b>
-              </TraitScore>
+              <ValueDisplay>
+                <Label>Trait Price</Label>
+                <Value>{price}</Value>
+              </ValueDisplay>
             </Content>
             <RarityContainer rarity={rarity}>
-              <Rarity className="pill">{rarity}</Rarity>
+              <Rarity className="pill">{rarity[0]} {traitScore}</Rarity>
             </RarityContainer>
           </ToolTip>
         )}

@@ -25,7 +25,7 @@ export const ToolTip = styled.div`
   align-items: center;
   justify-content: center;
   background-color: white;
-  min-width: 120px;
+  min-width: 150px;
   overflow: clip;
   border-radius: 16px;
   box-shadow: 0 10px 8px 1px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.35);
@@ -54,10 +54,12 @@ export const Preview = styled.img`
 export const TraitName = styled.p`
   font-weight: bold;
   font-size: 1.2em;
+  margin-bottom: 0.25em;
 `;
 
 export const Content = styled.div`
   padding: 10px;
+  padding-bottom: 0;
 `;
 
 export const TraitScore = styled.p``;
