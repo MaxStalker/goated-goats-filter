@@ -51,10 +51,13 @@ export default function Goat(props) {
     const trait = sortedTraits[i];
     console.log({trait, metadata: trait.metadata, traitsPrices})
     const rarity = trait.metadata.rarity === "base" ? "common" : trait.metadata.rarity
+    const price = traitsPrices[rarity]
+      ? traitsPrices[rarity].avaragePrice
+      : 0;
     slots[i] = {
       equipped: true,
       ...trait,
-      price: traitsPrices[rarity].avaragePrice,
+      price
     };
   }
 
