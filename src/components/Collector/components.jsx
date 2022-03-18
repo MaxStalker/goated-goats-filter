@@ -12,6 +12,7 @@ export const CollectorContainer = styled.div`
   font-size: 16px;
   &:first-of-type{
     background: linear-gradient(0deg, #f5ad2f, #fcce2a);
+    margin-top: 20px;
   }
 `;
 

@@ -81,11 +81,20 @@ export const CollectorsList = () => {
   return (
     <Container>
       <h2>Number of known collectors - {sorted.length}</h2>
+      <p>
+        <b>"Collector Score"</b> - is a sum of all skin and trait rarities (both
+        equipped and unequipped).
+      </p>
       {sorted.map((address, i) => {
         const collector = byId[address];
         const user = userData[address];
         return (
-          <DisplayCollector key={address} collector={collector} user={user} position={i+1} />
+          <DisplayCollector
+            key={address}
+            collector={collector}
+            user={user}
+            position={i + 1}
+          />
         );
       })}
     </Container>
@@ -93,7 +102,7 @@ export const CollectorsList = () => {
 };
 
 export const DisplayCollector = (props) => {
-  const { collector, user,position } = props;
+  const { collector, user, position } = props;
   const { address, name } = collector;
   const baseUrl = `https://goated-goats-filter.vercel.app/owners/${address}`;
   const goats = `${baseUrl}/goats`;
@@ -109,7 +118,11 @@ export const DisplayCollector = (props) => {
   }
   return (
     <CollectorContainer>
-      <Value><b>#{position} {name}</b></Value>
+      <Value>
+        <b>
+          #{position} {name}
+        </b>
+      </Value>
       <Value>
         <b>Collector Score: {collectorScore}</b>
       </Value>
