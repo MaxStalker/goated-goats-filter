@@ -2,11 +2,19 @@ import { CollectorsContext, CollectorsProvider } from "./context/collectors";
 import { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { getDisplay, GoatedGoats, GoatedTraits } from "flow-cadut/views";
 import { Container } from "./Components";
-import { CollectorContainer, Value } from "./components/Collector/components";
+import {
+  CollectorContainer,
+  Value,
+  RankedGoats,
+} from "./components/Collector/components";
 import { setup } from "./utils/setup";
+import { getSkinName } from "./utils";
+import Goat from "./components/Goat";
+import { PricesContext } from "./context/prices";
 
 export const CollectorsList = () => {
   const context = useContext(CollectorsContext);
+  const { goatsPrices, traitsPrices } = useContext(PricesContext);
   const { byId, addresses } = context;
 
   const [userData, setUserData] = useState({});
@@ -22,11 +30,21 @@ export const CollectorsList = () => {
       await getDisplay([GoatedGoats, GoatedTraits], address);
 
     let collectorScore = 0;
-
+    let bestGoat = null;
     if (goats) {
       for (let i = 0; i < goats.length; i++) {
         const goat = goats[i];
-        collectorScore += goat.skinScore + goat.traitsScore;
+        const totalScore = goat.skinScore + goat.traitsScore;
+
+        if (!bestGoat) {
+          bestGoat = goat;
+        } else {
+          if (totalScore > bestGoat.skinScore + goat.traitsScore) {
+            bestGoat = goat;
+          }
+        }
+
+        collectorScore += totalScore;
       }
     }
 
@@ -43,6 +61,7 @@ export const CollectorsList = () => {
         goats,
         traits,
         collectorScore,
+        bestGoat,
       },
     }));
   };
@@ -78,13 +97,75 @@ export const CollectorsList = () => {
     return 0;
   });
 
+  const goatsRanked = sorted
+    .map((address) => {
+      const goat = userData[address] || {};
+      const totalScore = goat.bestGoat
+        ? goat.bestGoat.skinScore + goat.bestGoat.traitsScore
+        : 0;
+      return {
+        ...goat.bestGoat,
+        address,
+        totalScore,
+      };
+    })
+    .sort((a, b) => {
+      if (a.totalScore > b.totalScore) {
+        return -1;
+      }
+
+      if (a.totalScore < b.totalScore) {
+        return 1;
+      }
+
+      return 0;
+    });
+
   return (
     <Container>
+      <h2>Wildest Goats</h2>
+      <RankedGoats>
+        {goatsRanked.slice(0, 3).map((goat) => {
+          if (!goat.metadata) {
+            return null;
+          }
+          const onClick = () => {};
+          const selected = false;
+          const {skinFileName, skinRarity} = goat.metadata
+          const skinName = getSkinName(skinFileName);
+          const skinPrice = goatsPrices[skinRarity]
+            ? goatsPrices[skinRarity][goat.traitSlots - 5]
+            : 0;
+          const traitsPrice = goat.equippedTraits.reduce((acc, trait) => {
+            let { rarity } = trait.metadata;
+            rarity = rarity === "base" ? "common" : rarity;
+            const price = traitsPrices[rarity]
+              ? traitsPrices[rarity].avaragePrice
+              : 0;
+            acc += parseFloat(price);
+            return acc;
+          }, 0);
+          const totalPrice = parseFloat(skinPrice) + traitsPrice;
+          return (
+            <Goat
+              key={goat.id}
+              goat={goat}
+              onClick={onClick}
+              selected={selected}
+              skinName={skinName}
+              skinPrice={skinPrice}
+              totalPrice={totalPrice}
+            />
+          );
+        })}
+      </RankedGoats>
       <h2>Number of known collectors - {sorted.length}</h2>
       <p>
         <b>"Collector Score"</b> - is a sum of all skin and trait rarities (both
         equipped and unequipped).
       </p>
+      <br/>
+      <div>
       {sorted.map((address, i) => {
         const collector = byId[address];
         const user = userData[address];
@@ -97,6 +178,7 @@ export const CollectorsList = () => {
           />
         );
       })}
+      </div>
     </Container>
   );
 };
