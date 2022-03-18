@@ -24,6 +24,7 @@ export default function Slot(props) {
 
   const getImage = (type) => `https://goatedgoats.com/${type}.svg`;
   let src = ``;
+  console.log(traitSlot)
   switch (traitSlot) {
     case "head-mouth":
     case "mouths":
@@ -33,6 +34,7 @@ export default function Slot(props) {
     case "eyes":
       src = getImage("eyes");
       break;
+    case "head-tattoo":
     case "head-hat":
       src = getImage("hat");
     case "head-eyebrow":
