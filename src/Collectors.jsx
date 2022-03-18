@@ -128,7 +128,7 @@ export const CollectorsList = () => {
     });
 
   const wildedGoats = goatsRanked.slice(0, 3);
-  const pitBosses = goatsRanked.slice(4,10);
+  const pitBosses = goatsRanked.slice(3,9);
 
   const mapGoat = (goat) => {
     if (!goat.metadata) {
