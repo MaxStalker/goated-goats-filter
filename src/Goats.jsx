@@ -3,7 +3,6 @@ import GalleryDisplay from "./GalleryDisplay";
 import Goat from "./components/Goat";
 import { PricesContext } from "./context/prices";
 import { getSkinName } from "./utils";
-import { useLocation } from "react-router";
 
 export default function Goats(props) {
   const { goats } = props;
@@ -27,7 +26,6 @@ export default function Goats(props) {
         const skinPrice = goatsPrices[skinRarity]
           ? goatsPrices[skinRarity][item.traitSlots - 5]
           : 0;
-        console.log({skinRarity, skinPrice})
         const traitsPrice = item.equippedTraits.reduce((acc, trait) => {
           let { rarity } = trait.metadata;
           rarity = rarity === "base" ? "common" : rarity;

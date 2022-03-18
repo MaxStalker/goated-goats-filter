@@ -9,10 +9,10 @@ export const PricesContext = createContext({
 export const PriceProvider = ({ children }) => {
   const [goatsPrices, setGoatsPrices] = useState({});
   const [traitsPrices, setTraitsPrices] = useState({});
+  const [collectors, setCollectors] = useState({})
 
   const fetchGoatPrices = async () => {
     const goatsPrices = await getAdjustedGoatPrices();
-    console.log(goatsPrices)
     setGoatsPrices(goatsPrices);
   };
 

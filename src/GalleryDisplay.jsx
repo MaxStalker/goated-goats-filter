@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
 import { Gallery, Checkbox, SelectorBox, Input } from "./Components";
 import { useLocation } from "react-router";
+import { extractParams } from "./utils";
 
 export default function GalleryDisplay(props) {
   const location = useLocation();
   const { pathname, search } = location;
 
+  const urlParams = extractParams(search);
+  // console.log({urlParams})
+
   const { items, query, getRarity } = props;
   const [selectedItems, setSelectedItems] = useState({});
+  // console.log({selectedItems})
 
   const [filterSelected, setFilterSelected] = useState(false);
   const [filteredItems, setFilterItems] = useState(items);

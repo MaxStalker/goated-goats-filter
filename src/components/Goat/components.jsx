@@ -5,6 +5,16 @@ import { Link } from "react-router-dom";
 export const Container = styled.div`
   border-radius: 16px;
   background-color: white;
+  outline: ${({ selected }) => (selected ? "3px solid orange" : "0 solid white")};
+  cursor: pointer;
+  transform: translate(0,0);
+  transition: all 0.5s ease-in-out;
+  &:hover{
+    transform: translate(0px, -10px);
+    transition: all 0.1s;
+    z-index: 5;
+    box-shadow: 0 10px 10px 1px rgba(0,0,0,0.05);
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -77,8 +87,37 @@ export const RarityContainer = styled.div`
   margin-top: 20px;
   border-radius: 0 0 16px 16px;
 
+  a {
+    display: flex;
+    flex: 0 0 auto;
+    width: 100%;
+    top: -50%;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    
+    label{
+      pointer-events: none;
+    }
+    
+    .details{
+      display: none;
+    }
+    .rarity{
+      display: initial;
+    }
+    
+    &:hover{
+      .details{
+        display: initial;
+      }
+      .rarity{
+        display: none;
+      }
+    }
+  }
+  
   ${({ rarity }) => {
-    let capitalize = rarity === "legendary";
     const pillColor = rarityColors[rarity];
     const bgColor = `${pillColor}33`
     return `
