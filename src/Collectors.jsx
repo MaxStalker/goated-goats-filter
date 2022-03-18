@@ -128,44 +128,53 @@ export const CollectorsList = () => {
       return 0;
     });
 
+  const wildedGoats = goatsRanked.slice(0, 3);
+  const pitBosses = goatsRanked.slice(4,10);
+
+  const mapGoat = (goat) => {
+    if (!goat.metadata) {
+      return null;
+    }
+    const onClick = () => {};
+    const selected = false;
+    const {skinFileName, skinRarity} = goat.metadata
+    const skinName = getSkinName(skinFileName);
+    const skinPrice = goatsPrices[skinRarity]
+      ? goatsPrices[skinRarity][goat.traitSlots - 5]
+      : 0;
+    const traitsPrice = goat.equippedTraits.reduce((acc, trait) => {
+      let { rarity } = trait.metadata;
+      rarity = rarity === "base" ? "common" : rarity;
+      const price = traitsPrices[rarity]
+        ? traitsPrices[rarity].avaragePrice
+        : 0;
+      acc += parseFloat(price);
+      return acc;
+    }, 0);
+    const totalPrice = parseFloat(skinPrice) + traitsPrice;
+    return (
+      <Goat
+        name={goat.name}
+        key={goat.id}
+        goat={goat}
+        onClick={onClick}
+        selected={selected}
+        skinName={skinName}
+        skinPrice={skinPrice}
+        totalPrice={totalPrice}
+      />
+    );
+  }
   return (
     <Container>
-      <h2>Wildest Goats</h2>
+      <h1>Wildest Goats</h1>
       <RankedGoats>
-        {goatsRanked.slice(0, 3).map((goat) => {
-          if (!goat.metadata) {
-            return null;
-          }
-          const onClick = () => {};
-          const selected = false;
-          const {skinFileName, skinRarity} = goat.metadata
-          const skinName = getSkinName(skinFileName);
-          const skinPrice = goatsPrices[skinRarity]
-            ? goatsPrices[skinRarity][goat.traitSlots - 5]
-            : 0;
-          const traitsPrice = goat.equippedTraits.reduce((acc, trait) => {
-            let { rarity } = trait.metadata;
-            rarity = rarity === "base" ? "common" : rarity;
-            const price = traitsPrices[rarity]
-              ? traitsPrices[rarity].avaragePrice
-              : 0;
-            acc += parseFloat(price);
-            return acc;
-          }, 0);
-          const totalPrice = parseFloat(skinPrice) + traitsPrice;
-          return (
-            <Goat
-              name={goat.name}
-              key={goat.id}
-              goat={goat}
-              onClick={onClick}
-              selected={selected}
-              skinName={skinName}
-              skinPrice={skinPrice}
-              totalPrice={totalPrice}
-            />
-          );
-        })}
+        {wildedGoats.map(mapGoat)}
+      </RankedGoats>
+
+      <h2>Pit Bosses</h2>
+      <RankedGoats>
+        {pitBosses.map(mapGoat)}
       </RankedGoats>
       <h2>Number of known collectors - {sorted.length}</h2>
       <p>
