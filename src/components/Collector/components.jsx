@@ -10,7 +10,7 @@ export const CollectorContainer = styled.div`
   border-radius: 8px;
   margin-bottom: 10px;
   font-size: 16px;
-  &:first-child {
+  &:first-of-type{
     background: linear-gradient(0deg, #f5ad2f, #fcce2a);
   }
 `;
