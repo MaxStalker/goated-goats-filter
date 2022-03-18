@@ -12,15 +12,7 @@ import SingleGoat from "./SingleGoat";
 import SingleTrait from "./SingleTrait";
 import { PricesContext } from "./context/prices";
 import PriceChart from "./components/PriceChart";
-
-const setup = async () => {
-  await setEnvironment("mainnet");
-  await registerPlugin(FIND);
-
-  await fcl.unauthenticate();
-
-  fcl.config().put("discovery.wallet", "https://flow-wallet.blocto.app/authn"); // Configure FCL's Wallet Discovery mechanism
-};
+import { setup } from "./utils/setup";
 
 export default function User() {
   const { owner } = useParams();

@@ -1,4 +1,4 @@
-import {useContext} from "react";
+import { useContext } from "react";
 import {
   Container,
   GoatName,
@@ -49,15 +49,13 @@ export default function Goat(props) {
 
   for (let i = 0; i < sortedTraits.length; i++) {
     const trait = sortedTraits[i];
-    console.log({trait, metadata: trait.metadata, traitsPrices})
-    const rarity = trait.metadata.rarity === "base" ? "common" : trait.metadata.rarity
-    const price = traitsPrices[rarity]
-      ? traitsPrices[rarity].avaragePrice
-      : 0;
+    const rarity =
+      trait.metadata.rarity === "base" ? "common" : trait.metadata.rarity;
+    const price = traitsPrices[rarity] ? traitsPrices[rarity].avaragePrice : 0;
     slots[i] = {
       equipped: true,
       ...trait,
-      price
+      price,
     };
   }
 
@@ -72,12 +70,14 @@ export default function Goat(props) {
   }
 
   return (
-    <Container onClick={onClick}>
+    <Container
+      onClick={onClick}
+      selected={selected}
+      title={`${selected ? "Remove from" : "Add to"} selection`}
+    >
       <ImageContainer>
         <ImageContainer>
-          <Link to={to}>
-            <GoatImage src={goat.image} alt={imageAlt} title={imageAlt} />
-          </Link>
+          <GoatImage src={goat.image} alt={imageAlt} title={imageAlt} />
         </ImageContainer>
       </ImageContainer>
       <Content>
@@ -99,9 +99,14 @@ export default function Goat(props) {
         </Values>
       </Content>
       <RarityContainer rarity={skinRarity}>
-        <Rarity rarity={skinRarity} className="pill">
-          {skinRarity} {totalScore}
-        </Rarity>
+        <Link to={to}>
+          <Rarity rarity={skinRarity} className="pill">
+            <label className={"rarity"}>
+              {skinRarity} {totalScore}
+            </label>
+            <label className={"details"}>Show Details</label>
+          </Rarity>
+        </Link>
       </RarityContainer>
     </Container>
   );
