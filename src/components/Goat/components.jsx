@@ -23,6 +23,8 @@ export const ImageContainer = styled.div`
 `;
 export const GoatImage = styled.img`
   width: 200px;
+  min-width: 200px;
+  min-height: 200px;
 `;
 export const GoatName = styled.h3`
   text-align: center;

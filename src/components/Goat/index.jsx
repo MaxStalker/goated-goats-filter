@@ -59,7 +59,9 @@ export default function Goat(props) {
     };
   }
 
-  const mappedTraits = slots.map((slot, i) => <Slot {...slot} index={i} />);
+  const mappedTraits = slots.map((slot, i) => {
+    return <Slot key={slot.id} {...slot} index={i} />
+  });
 
   const split = slots.length / 2 + 1;
   let firstRow = mappedTraits;
@@ -83,8 +85,8 @@ export default function Goat(props) {
       <Content>
         <GoatName rarity={skinRarity}>{name || skinName}</GoatName>
         <SlotsContainer>
-          <SlotsRow>{firstRow}</SlotsRow>
-          {secondRow && <SlotsRow>{secondRow}</SlotsRow>}
+          <SlotsRow key={"first"}>{firstRow}</SlotsRow>
+          {secondRow && <SlotsRow key={"second"}>{secondRow}</SlotsRow>}
         </SlotsContainer>
         <Values>
           <ValueDisplay>

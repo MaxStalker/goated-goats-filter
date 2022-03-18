@@ -73,9 +73,12 @@ export const CollectorsList = () => {
 
   const limit = addresses.length;
 
+  const delay = 100;
   useLayoutEffect(() => {
     for (let i = 0; i < limit; i++) {
-      getUserCollection(addresses[i]);
+      setTimeout(()=>{
+        getUserCollection(addresses[i]);
+      }, i * delay)
     }
   }, [context]);
 

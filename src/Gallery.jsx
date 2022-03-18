@@ -68,7 +68,7 @@ export const Trait = ({ trait, selected, onClick }) => {
       </Frame>
       {Object.keys(meta).map((key) => {
         const data = meta[key];
-        return <Meta label={key} value={data} />;
+        return <Meta key={key} label={key} value={data} />;
       })}
     </PreviewContainer>
   );

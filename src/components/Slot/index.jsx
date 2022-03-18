@@ -62,6 +62,7 @@ export default function Slot(props) {
   return (
     <>
       <Container
+        key={props.id}
         ref={ref}
         rarity={rarity}
         onMouseOver={() => {
