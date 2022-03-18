@@ -14,7 +14,8 @@ export default function Traits(props) {
         return (
           item.metadata.rarity.includes(term) ||
           item.metadata.traitSlot.includes(term) ||
-          item.metadata.fileName.includes(term)
+          item.metadata.fileName.includes(term) ||
+          item.id.toString().includes(term)
         );
       }}
       renderItem={({ item, onClick, selected }) => {

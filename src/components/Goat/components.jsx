@@ -31,6 +31,10 @@ export const GoatName = styled.h3`
   font-size: 20px;
   margin: 0;
   color: ${({ rarity }) => rarityColors[rarity]};
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 180px;
 `;
 
 export const Content = styled.div`

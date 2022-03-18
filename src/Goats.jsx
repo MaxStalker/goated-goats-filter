@@ -17,7 +17,8 @@ export default function Goats(props) {
       query={(item, term) => {
         return (
           item.metadata.skinRarity.includes(term) ||
-          item.metadata.skinFileName.includes(term)
+          item.metadata.skinFileName.includes(term) ||
+          item.id.toString().includes(term)
         );
       }}
       renderItem={({ item, onClick, selected }) => {

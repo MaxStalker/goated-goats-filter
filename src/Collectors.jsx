@@ -49,10 +49,6 @@ export const CollectorsList = () => {
       }
     }
 
-    if(address.includes("butthole")){
-      console.log({goats, bestGoat})
-    }
-
     if (traits) {
       for (let i = 0; i < traits.length; i++) {
         const trait = traits[i];

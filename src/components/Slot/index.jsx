@@ -24,7 +24,6 @@ export default function Slot(props) {
 
   const getImage = (type) => `https://goatedgoats.com/${type}.svg`;
   let src = ``;
-  console.log(traitSlot)
   switch (traitSlot) {
     case "head-mouth":
     case "mouths":
