@@ -22,7 +22,7 @@ export default function Goat(props) {
   const { traitsPrices } = useContext(PricesContext);
 
   // Data formatting
-  const { goat, selected, onClick, skinName, skinPrice, totalPrice } = props;
+  const { goat, selected, onClick, skinName, skinPrice, totalPrice, name } = props;
   const { owner } = useParams();
   const { metadata, traitSlots, skinScore, traitsScore, equippedTraits, id } =
     goat;
@@ -81,7 +81,7 @@ export default function Goat(props) {
         </ImageContainer>
       </ImageContainer>
       <Content>
-        <GoatName rarity={skinRarity}>{skinName}</GoatName>
+        <GoatName rarity={skinRarity}>{name || skinName}</GoatName>
         <SlotsContainer>
           <SlotsRow>{firstRow}</SlotsRow>
           {secondRow && <SlotsRow>{secondRow}</SlotsRow>}

@@ -99,6 +99,7 @@ export const CollectorsList = () => {
 
   const goatsRanked = sorted
     .map((address) => {
+      const name = byId[address] ? byId[address].name : "";
       const goat = userData[address] || {};
       const totalScore = goat.bestGoat
         ? goat.bestGoat.skinScore + goat.bestGoat.traitsScore
@@ -107,6 +108,7 @@ export const CollectorsList = () => {
         ...goat.bestGoat,
         address,
         totalScore,
+        name
       };
     })
     .sort((a, b) => {
@@ -148,6 +150,7 @@ export const CollectorsList = () => {
           const totalPrice = parseFloat(skinPrice) + traitsPrice;
           return (
             <Goat
+              name={goat.name}
               key={goat.id}
               goat={goat}
               onClick={onClick}
