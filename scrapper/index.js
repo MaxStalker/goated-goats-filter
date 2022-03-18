@@ -10,7 +10,25 @@ async function main() {
       address: owner,
     };
   });
-  console.log(formatted.slice(0, 5));
+
+  let seen = {};
+  let skipped = 0;
+  let start = 0;
+  let end = 100;
+
+  for (let i = start; i < Math.max(formatted.length, end); i++) {
+    const user = formatted[i];
+
+/*    // Skip processed addresses
+    if (seen[user.address]) {
+      skipped += 1;
+      continue;
+    }*/
+
+    seen[user.address] = true;
+    console.log({ user });
+  }
+  console.log({ skipped, total: formatted.length });
 }
 
 main();
