@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
+    "esm": "^3.2.25",
     "prettier": "^2.5.1",
     "vite": "^2.8.0"
   }
