@@ -29,6 +29,7 @@ export const CollectorsList = () => {
     const { GoatedGoats: goats = [], GoatedTraits: traits = [] } =
       await getDisplay([GoatedGoats, GoatedTraits], address);
 
+
     let collectorScore = 0;
     let bestGoat = null;
     if (goats) {
@@ -39,13 +40,17 @@ export const CollectorsList = () => {
         if (!bestGoat) {
           bestGoat = goat;
         } else {
-          if (totalScore > bestGoat.skinScore + goat.traitsScore) {
+          if (totalScore > bestGoat.skinScore + bestGoat.traitsScore) {
             bestGoat = goat;
           }
         }
 
         collectorScore += totalScore;
       }
+    }
+
+    if(address.includes("butthole")){
+      console.log({goats, bestGoat})
     }
 
     if (traits) {
