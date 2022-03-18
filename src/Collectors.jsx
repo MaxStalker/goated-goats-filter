@@ -7,43 +7,85 @@ import { setup } from "./utils/setup";
 
 export const CollectorsList = () => {
   const context = useContext(CollectorsContext);
-  console.log({ context });
   const { byId, addresses } = context;
 
   const [userData, setUserData] = useState({});
-  window.userData = userData
 
   const getUserCollection = async (address) => {
+    if (!address) {
+      return false;
+    }
     // TODO: get latest update from local storage and skip fetching if it was less than 5 minutes ago
 
     await setup();
     const { GoatedGoats: goats = [], GoatedTraits: traits = [] } =
       await getDisplay([GoatedGoats, GoatedTraits], address);
-    console.log({ address, goats, traits });
-    setUserData({
-      ...userData,
+
+    let collectorScore = 0;
+
+    if (goats) {
+      for (let i = 0; i < goats.length; i++) {
+        const goat = goats[i];
+        collectorScore += goat.skinScore + goat.traitsScore;
+      }
+    }
+
+    if (traits) {
+      for (let i = 0; i < traits.length; i++) {
+        const trait = traits[i];
+        collectorScore += trait.rarityScore;
+      }
+    }
+
+    setUserData((prev) => ({
+      ...prev,
       [address]: {
         goats,
         traits,
+        collectorScore,
       },
-    });
+    }));
   };
 
   const limit = addresses.length;
-  // const limit = 3;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     for (let i = 0; i < limit; i++) {
       getUserCollection(addresses[i]);
     }
-  }, []);
+  }, [context]);
+
+  const sorted = addresses.sort((a, b) => {
+    if (!userData[a] && !userData[b]) {
+      return 0;
+    }
+
+    if (!userData[b]) {
+      return -1;
+    }
+
+    if (!userData[a]) {
+      return 1;
+    }
+
+    if (userData[a].collectorScore > userData[b].collectorScore) {
+      return -1;
+    }
+    if (userData[a].collectorScore < userData[b].collectorScore) {
+      return 1;
+    }
+
+    return 0;
+  });
 
   return (
     <Container>
-      {addresses.map((address) => {
+      {sorted.map((address) => {
         const collector = byId[address];
         const user = userData[address];
-        return <DisplayCollector collector={collector} user={user} />;
+        return (
+          <DisplayCollector key={address} collector={collector} user={user} />
+        );
       })}
     </Container>
   );
@@ -56,18 +98,35 @@ export const DisplayCollector = (props) => {
   const goats = `${baseUrl}/goats`;
   const traits = `${baseUrl}/traits`;
 
-  console.log({ user });
-  //const numberOfGoats = user ? userData : "???";
+  let numberOfGoats = "???",
+    numberOfTraits = "???",
+    collectorScore = "???";
+  if (user) {
+    numberOfGoats = user.goats ? user.goats.length : "???";
+    numberOfTraits = user.traits ? user.traits.length : "???";
+    collectorScore = user.collectorScore ? user.collectorScore : "???";
+  }
+
+  console.log({ address, collectorScore });
   return (
     <CollectorContainer>
       <Value>{name}</Value>
       <Value>
-        <b>{address}</b>
+        <b>Collector Score: {collectorScore}</b>
+      </Value>
+      <Value>
+        <b>Goats: {numberOfGoats}</b>
       </Value>
       <Value>
         <a target="_blank" href={goats}>
           Goats
         </a>
+      </Value>
+      <Value>
+        <b>{address}</b>
+      </Value>
+      <Value>
+        <b>Traits: {numberOfTraits}</b>
       </Value>
       <Value>
         <a target="_blank" href={traits}>

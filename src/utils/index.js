@@ -59,12 +59,9 @@ export const getCollectors = async () => {
   const text = await file.text();
   const data = text.split(/\r\n|\n/).filter((item) => item);
 
-  console.log({ data });
-
   return data.slice(1).reduce(
     (acc, item) => {
       // TODO: implement data processing here
-      console.log({item})
       const [name, discordHandle, address] = item.split(",");
       if (address === "") {
         return acc;
