@@ -16,6 +16,7 @@ import {
   Value,
   ValueDisplay,
 } from "../Goat/components";
+import { getImage } from "../../utils";
 
 export default function Slot(props) {
   const ref = useRef(null);
@@ -28,40 +29,7 @@ export default function Slot(props) {
   const { traitSlot, fileName, rarity } = metadata;
   const [showToolTip, setShowTooltip] = useState(false);
 
-  const getImage = (type) => `https://goatedgoats.com/${type}.svg`;
-  let src = ``;
-  switch (traitSlot) {
-    case "head-mouth":
-    case "mouths":
-      src = getImage("mouth");
-      break;
-    case "head-eyes":
-    case "eyes":
-      src = getImage("eyes");
-      break;
-    case "head-tattoo":
-    case "head-hat":
-      src = getImage("hat");
-    case "head-eyebrow":
-    case "head-ears":
-    case "hats":
-      src = getImage("hat");
-      break;
-    case "body-accessory":
-      src = getImage("guitar");
-      break;
-    case "clothes":
-      src = getImage("body");
-      break;
-    case "neck":
-      src = getImage("medal");
-      break;
-    case "background":
-      src = getImage("background");
-      break;
-    default:
-      break;
-  }
+  const src = getImage(traitSlot);
   const title = getTraitName(fileName, traitSlot);
   const OFFSET_X = 16;
   const OFFSET_Y = 16;

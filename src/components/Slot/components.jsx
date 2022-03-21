@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { rarityColors } from "../../utils/colors";
+import body from "../../images/goat-body.png";
+import head from "../../images/goat-head.png";
 
 export const Container = styled.div`
   --size: 30px;
@@ -48,7 +50,7 @@ export const PreviewContainer = styled.div`
   overflow: clip;
   border-radius: 16px 16px 0 0;
   position: relative;
-  .min200{
+  &.min200 {
     min-width: 200px;
     min-height: 200px;
   }
@@ -57,7 +59,7 @@ export const Preview = styled.img`
   width: 100%;
   height: auto;
   min-width: 100%;
-  z-index: 2;
+  z-index: ${({ elevate = 2 }) => elevate};
 `;
 
 export const Silhouette = styled.img.attrs((props) => ({
@@ -69,6 +71,34 @@ export const Silhouette = styled.img.attrs((props) => ({
   left: 0;
   right: 0;
   z-index: 1;
+`;
+
+export const SilhouetteBody = styled.img.attrs((props) => ({
+  src: body,
+}))`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+  z-index: 2;
+`;
+
+export const SilhouetteHead = styled.img.attrs((props) => ({
+  src: head,
+}))`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+  z-index: 2;
 `;
 
 export const TraitName = styled.p`

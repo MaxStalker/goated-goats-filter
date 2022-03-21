@@ -25,12 +25,13 @@ export const ImageContainer = styled.div`
   background-color: ${({ rarity }) => `${rarityColors[rarity]}33`};
 `;
 export const GoatImage = styled.img`
-  width: 200px;
-  min-width: 200px;
-  min-height: 200px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   display: block;
 `;
 export const GoatName = styled.h3`
+  width: 100%;
   text-align: center;
   font-size: 20px;
   margin: 0;
@@ -38,7 +39,6 @@ export const GoatName = styled.h3`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  max-width: 180px;
 `;
 
 export const Row = styled.div`

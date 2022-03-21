@@ -27,16 +27,22 @@ export default function Goat(props) {
   const { traitsPrices } = useContext(PricesContext);
 
   // Data formatting
-  const { goat, selected, onClick, skinName, skinPrice, totalPrice, name } =
+  const { goat, selected, onClick, skinName, skinPrice, totalPrice, name, url } =
     props;
   const { owner } = useParams();
-  const { metadata, traitSlots, skinScore, traitsScore, equippedTraits, id } =
-    goat;
+  const {
+    metadata,
+    traitSlots,
+    skinScore,
+    traitsScore,
+    equippedTraits,
+    id,
+  } = goat;
   const skinRarity = metadata.skinRarity; // capitalize(metadata.skinRarity);
   const imageAlt = `[${skinRarity}] ${skinName}`;
   const totalScore = skinScore + traitsScore;
 
-  const to = `/owners/${owner}/goat/${id}`;
+  const to = url || `/owners/${owner}/goat/${id}`;
 
   // Prepare slots
   let slots = Array.from(Array(traitSlots)).map((_, i) => ({

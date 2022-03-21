@@ -11,8 +11,11 @@ import { setup } from "./utils/setup";
 import { getSkinName } from "./utils";
 import Goat from "./components/Goat";
 import { PricesContext } from "./context/prices";
+import { useNavigate } from "react-router";
 
 export const CollectorsList = () => {
+  let navigate = useNavigate();
+
   const context = useContext(CollectorsContext);
   const { goatsPrices, traitsPrices } = useContext(PricesContext);
   const { byId, addresses } = context;
@@ -28,7 +31,6 @@ export const CollectorsList = () => {
     await setup();
     const { GoatedGoats: goats = [], GoatedTraits: traits = [] } =
       await getDisplay([GoatedGoats, GoatedTraits], address);
-
 
     let collectorScore = 0;
     let bestGoat = null;
@@ -72,9 +74,9 @@ export const CollectorsList = () => {
   const delay = 100;
   useLayoutEffect(() => {
     for (let i = 0; i < limit; i++) {
-      setTimeout(()=>{
+      setTimeout(() => {
         getUserCollection(addresses[i]);
-      }, i * delay)
+      }, i * delay);
     }
   }, [context]);
 
@@ -112,7 +114,7 @@ export const CollectorsList = () => {
         ...goat.bestGoat,
         address,
         totalScore,
-        name
+        name,
       };
     })
     .sort((a, b) => {
@@ -128,7 +130,7 @@ export const CollectorsList = () => {
     });
 
   const wildedGoats = goatsRanked.slice(0, 3);
-  const pitBosses = goatsRanked.slice(3,9);
+  const pitBosses = goatsRanked.slice(3, 9);
 
   const mapGoat = (goat) => {
     if (!goat.metadata) {
@@ -136,7 +138,7 @@ export const CollectorsList = () => {
     }
     const onClick = () => {};
     const selected = false;
-    const {skinFileName, skinRarity} = goat.metadata
+    const { skinFileName, skinRarity } = goat.metadata;
     const skinName = getSkinName(skinFileName);
     const skinPrice = goatsPrices[skinRarity]
       ? goatsPrices[skinRarity][goat.traitSlots - 5]
@@ -157,44 +159,43 @@ export const CollectorsList = () => {
         name={goat.name}
         key={goat.id}
         goat={goat}
-        onClick={onClick}
+        onClick={() => {
+          window.open(`/owners/${goat.address}/goat/${goat.id}`, "_blank");
+        }}
         selected={selected}
         skinName={skinName}
         skinPrice={skinPrice}
         totalPrice={totalPrice}
+        url={`/owners/${goat.address}/goat/${goat.id}`}
       />
     );
-  }
+  };
   return (
     <Container>
       <h1>Wildest Goats</h1>
-      <RankedGoats>
-        {wildedGoats.map(mapGoat)}
-      </RankedGoats>
+      <RankedGoats>{wildedGoats.map(mapGoat)}</RankedGoats>
 
       <h2>Pit Bosses</h2>
-      <RankedGoats>
-        {pitBosses.map(mapGoat)}
-      </RankedGoats>
+      <RankedGoats>{pitBosses.map(mapGoat)}</RankedGoats>
       <h2>Number of known collectors - {sorted.length}</h2>
       <p>
         <b>"Collector Score"</b> - is a sum of all skin and trait rarities (both
         equipped and unequipped).
       </p>
-      <br/>
+      <br />
       <div>
-      {sorted.map((address, i) => {
-        const collector = byId[address];
-        const user = userData[address];
-        return (
-          <DisplayCollector
-            key={address}
-            collector={collector}
-            user={user}
-            position={i + 1}
-          />
-        );
-      })}
+        {sorted.map((address, i) => {
+          const collector = byId[address];
+          const user = userData[address];
+          return (
+            <DisplayCollector
+              key={address}
+              collector={collector}
+              user={user}
+              position={i + 1}
+            />
+          );
+        })}
       </div>
     </Container>
   );
