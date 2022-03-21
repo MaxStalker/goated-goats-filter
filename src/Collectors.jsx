@@ -1,5 +1,5 @@
 import { CollectorsContext, CollectorsProvider } from "./context/collectors";
-import { useContext, useEffect, useLayoutEffect, useState } from "react";
+import { useContext, useLayoutEffect, useState } from "react";
 import { getDisplay, GoatedGoats, GoatedTraits } from "flow-cadut/views";
 import { Container } from "./Components";
 import {
@@ -153,6 +153,7 @@ export const CollectorsList = () => {
     const totalPrice = parseFloat(skinPrice) + traitsPrice;
     return (
       <Goat
+        single={true}
         name={goat.name}
         key={goat.id}
         goat={goat}

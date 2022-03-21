@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import GalleryDisplay from "./GalleryDisplay";
-import { Trait } from "./Gallery";
+import Trait from "./components/Trait";
+import { PricesContext } from "./context/prices";
 
 export default function Traits(props) {
+  const { traitsPrices } = useContext(PricesContext);
+
   const { traits } = props;
   return (
     <GalleryDisplay
@@ -19,12 +23,18 @@ export default function Traits(props) {
         );
       }}
       renderItem={({ item, onClick, selected }) => {
+        const { rarity } = item.metadata;
+        const price = traitsPrices[rarity]
+          ? traitsPrices[rarity].avaragePrice
+          : 0;
+
         return (
           <Trait
             key={item.id}
-            trait={item}
+            trait={{...item, price}}
             onClick={onClick}
             selected={selected}
+            price={price}
           />
         );
       }}

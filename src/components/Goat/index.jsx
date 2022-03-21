@@ -13,16 +13,22 @@ import {
   Rarity,
   SlotsContainer,
   SlotsRow,
+  Row,
+  Left,
+  Right,
 } from "./components";
 import Slot from "../Slot";
 import { Link, useParams } from "react-router-dom";
 import { PricesContext } from "../../context/prices";
 
 export default function Goat(props) {
+  // Add props to render just name without number of slots
+  const { single } = props;
   const { traitsPrices } = useContext(PricesContext);
 
   // Data formatting
-  const { goat, selected, onClick, skinName, skinPrice, totalPrice, name } = props;
+  const { goat, selected, onClick, skinName, skinPrice, totalPrice, name } =
+    props;
   const { owner } = useParams();
   const { metadata, traitSlots, skinScore, traitsScore, equippedTraits, id } =
     goat;
@@ -60,7 +66,7 @@ export default function Goat(props) {
   }
 
   const mappedTraits = slots.map((slot, i) => {
-    return <Slot key={slot.id} {...slot} index={i} />
+    return <Slot key={slot.id} {...slot} index={i} />;
   });
 
   const split = slots.length / 2 + 1;
@@ -70,20 +76,28 @@ export default function Goat(props) {
     firstRow = mappedTraits.slice(0, split);
     secondRow = mappedTraits.slice(split);
   }
-
+  const title = name || skinName;
   return (
     <Container
       onClick={onClick}
       selected={selected}
       title={`${selected ? "Remove from" : "Add to"} selection`}
     >
-      <ImageContainer>
-        <ImageContainer>
-          <GoatImage src={goat.image} alt={imageAlt} title={imageAlt} />
-        </ImageContainer>
+      <ImageContainer rarity={skinRarity}>
+        <GoatImage src={goat.image} alt={imageAlt} title={imageAlt} />
       </ImageContainer>
       <Content>
-        <GoatName rarity={skinRarity}>{name || skinName}</GoatName>
+        <GoatName rarity={skinRarity}>
+          {single && title}
+          {!single && (
+            <Row>
+              <Left>{title}</Left>
+              <Right>
+                {equippedTraits.length}/{traitSlots}
+              </Right>
+            </Row>
+          )}
+        </GoatName>
         <SlotsContainer>
           <SlotsRow key={"first"}>{firstRow}</SlotsRow>
           {secondRow && <SlotsRow key={"second"}>{secondRow}</SlotsRow>}

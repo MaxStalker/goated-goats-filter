@@ -5,26 +5,30 @@ import { Link } from "react-router-dom";
 export const Container = styled.div`
   border-radius: 16px;
   background-color: white;
-  outline: ${({ selected }) => (selected ? "3px solid orange" : "0 solid white")};
+  outline: ${({ selected }) =>
+    selected ? "3px solid orange" : "0 solid white"};
   cursor: pointer;
-  transform: translate(0,0);
+  transform: translate(0, 0);
   transition: all 0.5s ease-in-out;
-  &:hover{
+
+  &:hover {
     transform: translate(0px, -10px);
     transition: all 0.1s;
     z-index: 5;
-    box-shadow: 0 10px 10px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.05);
   }
 `;
 
 export const ImageContainer = styled.div`
   overflow: clip;
   border-radius: 16px 16px 0 0;
+  background-color: ${({ rarity }) => `${rarityColors[rarity]}33`};
 `;
 export const GoatImage = styled.img`
   width: 200px;
   min-width: 200px;
   min-height: 200px;
+  display: block;
 `;
 export const GoatName = styled.h3`
   text-align: center;
@@ -37,11 +41,25 @@ export const GoatName = styled.h3`
   max-width: 180px;
 `;
 
+export const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Left = styled.div`
+  text-align: left;
+`;
+
+export const Right = styled.div`
+  text-align: right; ;
+`;
+
 export const Content = styled.div`
-  padding: 10px;
+  padding: 10px 16px;
   padding-bottom: 0;
   display: grid;
-  grid-template-rows: 30px 90px auto;
+  grid-template-rows: ${({ trait }) =>
+    trait ? "30px 60px" : "30px 90px auto"};
 `;
 export const Values = styled.div`
   display: grid;
@@ -79,7 +97,8 @@ export const Rarity = styled.div`
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  box-shadow: ${({rarity}) => rarity === "legendary" ? `0 0 8px ${rarityColors[rarity]}aa` : "none"};
+  box-shadow: ${({ rarity }) =>
+    rarity === "legendary" ? `0 0 8px ${rarityColors[rarity]}aa` : "none"};
 `;
 
 export const RarityContainer = styled.div`
@@ -101,31 +120,31 @@ export const RarityContainer = styled.div`
     position: absolute;
     text-align: center;
     justify-content: center;
-    
-    label{
+
+    label {
       pointer-events: none;
     }
-    
-    .details{
+
+    .details {
       display: none;
     }
-    .rarity{
+    .rarity {
       display: initial;
     }
-    
-    &:hover{
-      .details{
+
+    &:hover {
+      .details {
         display: initial;
       }
-      .rarity{
+      .rarity {
         display: none;
       }
     }
   }
-  
+
   ${({ rarity }) => {
     const pillColor = rarityColors[rarity];
-    const bgColor = `${pillColor}33`
+    const bgColor = `${pillColor}33`;
     return `
       background-color: ${bgColor};
       .pill{
@@ -148,22 +167,22 @@ export const SlotsRow = styled.div`
   display: flex;
   gap: 5px;
   margin-bottom: 10px;
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
   }
-`
+`;
 
 export const Slot = styled(Link)`
   --size: 30px;
   width: var(--size);
   height: var(--size);
   border-radius: var(--size);
-  background-color: ${({rarity, empty})=> {
-    if(empty){
-      return "#eee"
+  background-color: ${({ rarity, empty }) => {
+    if (empty) {
+      return "#eee";
     }
-    return rarityColors[rarity] || "#ddd"
-}};
+    return rarityColors[rarity] || "#ddd";
+  }};
   padding: 5px;
   display: flex;
   align-items: center;

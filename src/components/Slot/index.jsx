@@ -9,7 +9,13 @@ import {
   TraitName,
   Content,
 } from "./components";
-import {Label, Rarity, RarityContainer, Value, ValueDisplay} from "../Goat/components";
+import {
+  Label,
+  Rarity,
+  RarityContainer,
+  Value,
+  ValueDisplay,
+} from "../Goat/components";
 
 export default function Slot(props) {
   const ref = useRef(null);
@@ -87,7 +93,9 @@ export default function Slot(props) {
               </ValueDisplay>
             </Content>
             <RarityContainer rarity={rarity}>
-              <Rarity className="pill">{rarity[0]} {traitScore}</Rarity>
+              <Rarity className="pill">
+                {rarity[0]} {traitScore}
+              </Rarity>
             </RarityContainer>
           </ToolTip>
         )}

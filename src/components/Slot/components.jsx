@@ -45,10 +45,30 @@ export const PreviewContainer = styled.div`
   align-items: center;
   width: 100%;
   background-color: ${({ rarity }) => `${rarityColors[rarity]}33`};
+  overflow: clip;
+  border-radius: 16px 16px 0 0;
+  position: relative;
+  .min200{
+    min-width: 200px;
+    min-height: 200px;
+  }
 `;
 export const Preview = styled.img`
   width: 100%;
   height: auto;
+  min-width: 100%;
+  z-index: 2;
+`;
+
+export const Silhouette = styled.img.attrs((props) => ({
+  src: "https://goatedgoats.com/goat-silhouette.svg",
+}))`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 `;
 
 export const TraitName = styled.p`
