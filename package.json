@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "scrap": "node ./scrapper/index.js",
+    "parse-events": "node ./scrapper events"
   },
   "dependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
@@ -17,7 +19,7 @@
     "@rollup/plugin-node-resolve": "^13.1.3",
     "buffer": "^6.0.3",
     "events": "^3.3.0",
-    "flow-cadut": "0.1.15-alpha.21",
+    "flow-cadut": "0.1.15-alpha.22",
     "http-browserify": "^1.7.0",
     "https-browserify": "^1.0.0",
     "process": "^0.11.10",
@@ -37,7 +39,11 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
+    "esm": "^3.2.25",
+    "parse": "^3.4.1",
     "prettier": "^2.5.1",
-    "vite": "^2.8.0"
+    "vite": "^2.8.0",
+    "graphql": "^16.3.0",
+    "graphql-request": "^4.1.0"
   }
 }
