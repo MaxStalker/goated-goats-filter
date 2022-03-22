@@ -64,6 +64,7 @@ export const Content = styled.div`
 export const Values = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-bottom: ${({mb = 0}) => mb};
 `;
 export const ValueDisplay = styled.div`
   display: flex;
@@ -71,6 +72,7 @@ export const ValueDisplay = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 14px;
+  margin-bottom: ${({mb = 0}) => mb};
 `;
 export const Label = styled.label`
   color: #999;
