@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import {Routes, Route, Link, Navigate} from "react-router-dom";
 import { useLocation, useParams, useMatch } from "react-router";
 import { getDisplay, GoatedGoats, GoatedTraits } from "flow-cadut/views";
 import { registerPlugin, setEnvironment } from "flow-cadut";
@@ -108,6 +108,7 @@ export default function User() {
           path="/trait/:traitId"
           element={<SingleTrait data={traitsDictionary} />}
         />
+        <Route path="/" exact element={<Navigate to="goats" replace />} />
       </Routes>
     </Container>
   );

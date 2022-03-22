@@ -1,17 +1,6 @@
 import fs from "fs";
 import { setEnvironment, query, extendEnvironment } from "flow-cadut";
-
-/* Local Database */
-const LOCAL_DB = "./scrapper/db.json";
-const SMALL_DB = "./src/data/small-data.json";
-const readDB = (db) => {
-  let rawdata = fs.readFileSync(db);
-  return JSON.parse(rawdata);
-};
-const writeDB = (db, data) => {
-  let raw = JSON.stringify(data, null, 2);
-  fs.writeFileSync(db, raw);
-};
+import {LOCAL_DB, SMALL_DB, readDB, writeDB} from "./db";
 
 const GoatedGoatsEnvironment = {
   mainnet: {
@@ -109,7 +98,10 @@ const gatherSkinData = async () => {
         acc.types[skinRarity] = true;
 
         const skinName = skinFileName.slice(5, -4);
-        acc.skins[skinName] = true;
+        acc.skins[skinName] = {
+          ...item,
+          equippedTraits: []
+        };
 
         if (!acc.bySkin[skinName]) {
           acc.bySkin[skinName] = [];
@@ -173,6 +165,7 @@ const gatherSkinData = async () => {
 
   persist(LOCAL_DB)("goats", fixedData);
   persist(SMALL_DB)("goats", {
+    skins: fixedData.skins,
     byRarity: fixedData.byRarity,
     bySkin: fixedData.bySkin,
     bySlotCount: fixedData.bySlotCount,
@@ -374,8 +367,9 @@ const gatherTraitsData = async () => {
   console.log(fixedData.numbers);
 
   persist(LOCAL_DB)("traits", {
-    ...fixedData.fullData,
+    imageData: fixedData.imageData,
     totalCount,
+    ...fixedData.fullData,
   });
   persist(SMALL_DB)("traits", {
     imageData: fixedData.imageData,
@@ -388,6 +382,6 @@ const gatherTraitsData = async () => {
   await setEnvironment("mainnet");
   await extendEnvironment(GoatedGoatsEnvironment);
 
-  // await gatherSkinData();
-  await gatherTraitsData();
+  await gatherSkinData();
+  // await gatherTraitsData();
 })();

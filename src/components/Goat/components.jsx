@@ -23,12 +23,17 @@ export const ImageContainer = styled.div`
   overflow: clip;
   border-radius: 16px 16px 0 0;
   background-color: ${({ rarity }) => `${rarityColors[rarity]}33`};
+  position: relative;
+  width: 100%;
 `;
 export const GoatImage = styled.img`
   width: 100%;
   max-width: 300px;
   height: auto;
   display: block;
+  z-index: ${({ order = 1 }) => order};
+  top: 0;
+  position: ${({ order = 1 }) => (order > 1 ? "absolute" : "relative")};
 `;
 export const GoatName = styled.h3`
   width: 100%;
@@ -64,7 +69,7 @@ export const Content = styled.div`
 export const Values = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-bottom: ${({mb = 0}) => mb};
+  margin-bottom: ${({ mb = 0 }) => mb};
 `;
 export const ValueDisplay = styled.div`
   display: flex;
@@ -72,7 +77,7 @@ export const ValueDisplay = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  margin-bottom: ${({mb = 0}) => mb};
+  margin-bottom: ${({ mb = 0 }) => mb};
 `;
 export const Label = styled.label`
   color: #999;
