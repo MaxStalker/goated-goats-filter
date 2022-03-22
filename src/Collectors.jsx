@@ -16,6 +16,7 @@ import { useNavigate } from "react-router";
 export const CollectorsList = () => {
   let navigate = useNavigate();
 
+
   const context = useContext(CollectorsContext);
   const { goatsPrices, traitsPrices } = useContext(PricesContext);
   const { byId, addresses } = context;

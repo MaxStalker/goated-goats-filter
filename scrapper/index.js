@@ -1,2 +1,4 @@
 require = require("esm")(module /*, options*/);
-require("./scrap")
+
+let [filename] = process.argv.slice(2);
+require(`./${filename}`)

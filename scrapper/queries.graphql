@@ -1,0 +1,21 @@
+query Basic{
+    contract(id: "A.2068315349bdfce5.GoatedGoatsManager") {
+        interactions(limit: 25, offset: 0) {
+            count
+            edges {
+                node {
+                    time
+                    id
+                    proposer {
+                        address
+                    }
+                    status
+                    eventTypes(contractIds: ["A.2068315349bdfce5.GoatedGoatsManager"]) {
+                        fullId
+                    }
+                }
+            }
+        }
+    }
+}
+

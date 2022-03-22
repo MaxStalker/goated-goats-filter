@@ -1,0 +1,15 @@
+{
+  "name": "Flowscan Schema Schema",
+  "schemaPath": "flowscan-schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Flowscan GraphQL Endpoint": {
+        "url": "https://flowscan.org/query",
+        "headers": {
+
+        },
+        "introspect": true
+      }
+    }
+  }
+}

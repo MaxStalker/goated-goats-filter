@@ -18,7 +18,10 @@ export default defineConfig({
   plugins: [
     react(),
     copy({
-      targets: [{ src: "src/images/**/*", dest: "dist/public/images" }],
+      targets: [
+        { src: "src/images/**/*", dest: "dist/public/images" },
+        { src: "src/data/**/*", dest: "dist/public/data" },
+      ],
     }),
   ],
   optimizeDeps: {

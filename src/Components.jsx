@@ -38,10 +38,14 @@ export const Container = styled.div`
 `;
 
 export const Input = styled.input`
-  padding: 0.25em;
+  display: block;
+  width: 100%;
+  padding: 0.5em;
   font-size: 16px;
   text-align: center;
   flex-direction: column;
+  border-radius: 4px;
+  margin-bottom: ${({ mb = "initial" }) => mb};
 `;
 
 export const Selector = styled.div`
@@ -111,26 +115,25 @@ const rarityToGradient = (rarity) => {
   }
 };
 
-const getBgByRarity = rarity => {
+const getBgByRarity = (rarity) => {
   switch (rarity) {
     case "legendary":
-      return "#f2d1d9"
+      return "#f2d1d9";
     case "rare":
-      return "#d3f4ff"
+      return "#d3f4ff";
     case "epic":
-      return "#ecfff4"
+      return "#ecfff4";
     default:
-      return "white"
+      return "white";
   }
-}
-
+};
 
 export const PreviewContainer = styled.div`
   cursor: pointer;
   overflow: hidden;
   border-radius: 8px;
   padding: 20px;
-  background-color: ${({rarity}) => getBgByRarity(rarity)};
+  background-color: ${({ rarity }) => getBgByRarity(rarity)};
 
   p {
     font-size: 18px;
@@ -221,7 +224,7 @@ export const Tab = styled.div`
   justify-content: center;
   border-radius: 4px;
   cursor: pointer;
-  a{
+  a {
     text-decoration: none;
     color: inherit;
   }
