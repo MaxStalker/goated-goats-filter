@@ -73,6 +73,7 @@ const RarityDisplay = () => {
     <Container>
       <h2>Total Traits Minted: {totalCount}</h2>
       <Input
+        placeholder={"Enter trait name, rarity ot trait slot here"}
         mb={"16px"}
         type={"text"}
         onChange={(event) => setQuery(event.target.value)}
