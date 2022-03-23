@@ -1,12 +1,12 @@
 import GalleryDisplay from "./GalleryDisplay";
 import GoatRarity from "./components/Goat/rarity";
+import { searchTermInObject } from "./utils";
 
 export default function GoatRarities(props) {
   const { data } = props;
   console.log({ data });
 
   const numSlots = Object.keys(data.bySlotCount);
-  console.log({ numSlots });
 
   const reduced = numSlots
     .reduce((acc, num) => {
@@ -50,19 +50,14 @@ export default function GoatRarities(props) {
 
   return (
     <GalleryDisplay
+      placeholder={"Enter goat name, number of slots or rarity"}
       key={"goats-rarity"}
       items={reduced}
       getRarity={(item) => {
         return item.metadata.skinRarity;
       }}
       query={(item, term) => {
-        const parts = term.split(" ").map((item) => item.toLowerCase());
-        return parts.reduce((acc, part) => {
-          const itemHaveIt =
-            item.slotCount.toString().toLowerCase().includes(part) ||
-            item.skinName.toString().toLowerCase().includes(part);
-          return acc && itemHaveIt;
-        }, true);
+        return searchTermInObject([item.slotCount, item.skinName], term);
       }}
       renderItem={({ item, onClick, selected }) => {
         const { id, skinName } = item;

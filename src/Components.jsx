@@ -200,6 +200,7 @@ export const SelectorBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 `;
 
 export const Tabs = styled.div`
