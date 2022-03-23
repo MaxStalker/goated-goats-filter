@@ -28,7 +28,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 80vw;
+  max-width: 960px;
   margin: 0 auto;
 
   @media (max-width: 480px) {
@@ -200,6 +200,7 @@ export const SelectorBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 `;
 
 export const Tabs = styled.div`

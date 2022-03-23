@@ -160,3 +160,15 @@ export const getImage = (traitSlot) => {
 
   return src;
 };
+
+export const searchTermInObject = (fields, term) => {
+  const parts = term.split(" ").map((item) => item.toLowerCase());
+  return parts.reduce((acc, part) => {
+
+    const itemHaveIt = fields.reduce((fieldAcc, field) => {
+      return fieldAcc || field.toString().toLowerCase().includes(part);
+    }, false);
+
+    return acc && itemHaveIt;
+  }, true);
+};

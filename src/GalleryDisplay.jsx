@@ -10,7 +10,7 @@ export default function GalleryDisplay(props) {
   const urlParams = extractParams(search);
   // console.log({urlParams})
 
-  const { items, query, getRarity } = props;
+  const { items, query, getRarity, placeholder = "" } = props;
   const [selectedItems, setSelectedItems] = useState({});
   // console.log({selectedItems})
 
@@ -90,6 +90,7 @@ export default function GalleryDisplay(props) {
       </SelectorBox>
       <SelectorBox>
         <Input
+          placeholder={placeholder}
           value={property}
           onChange={(e) => {
             const search = e.target.value;
