@@ -115,7 +115,7 @@ export const extractParams = (url) => {
 };
 
 export const getElevation = (traitSlot) => {
-  if (traitSlot.includes("mouth") || traitSlot.includes("head-")) {
+  if (traitSlot.includes("mouth") || traitSlot.includes("head-") || traitSlot.includes("eye")) {
     return 4;
   }
 
