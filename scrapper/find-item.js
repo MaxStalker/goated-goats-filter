@@ -40,7 +40,7 @@ import { setEnvironment } from "flow-cadut";
     .slice(0, 10);
 
   await setEnvironment("mainnet");
-  console.log(`:robot: Human, you were looking for **${searchItem}**`)
+  console.log(`:robot: Human, you were looking for **${searchItem}**. These accounts **might** have it:`)
   for (let i = 0; i < numberOfItems.length; i++) {
     const { addr, num } = numberOfItems[i];
     const find = await resolveAddress(addr);
