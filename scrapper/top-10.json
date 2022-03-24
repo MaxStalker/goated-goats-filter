@@ -1,0 +1,72 @@
+[
+  {
+    "address": "0x172077fc1fc038da",
+    "goats": 99,
+    "traits": 843,
+    "find": "jbourb",
+    "collection": "https://goated-goats-filter.vercel.app/owners/find:jbourb/goats"
+  },
+  {
+    "address": "0x1bcf4e7450ff3200",
+    "goats": 54,
+    "traits": 461,
+    "find": "oogie",
+    "collection": "https://goated-goats-filter.vercel.app/owners/find:oogie/goats"
+  },
+  {
+    "address": "0xa9a82c6a04d6df2b",
+    "goats": 49,
+    "traits": 393,
+    "find": "arsonic",
+    "collection": "https://goated-goats-filter.vercel.app/owners/find:arsonic/goats"
+  },
+  {
+    "address": "0xc41333b67801cf74",
+    "goats": 40,
+    "traits": 212,
+    "find": "xpromt",
+    "collection": "https://goated-goats-filter.vercel.app/owners/find:xpromt/goats"
+  },
+  {
+    "address": "0x196c1869b10635b1",
+    "goats": 36,
+    "traits": 384,
+    "find": "raven-kus",
+    "collection": "https://goated-goats-filter.vercel.app/owners/find:raven-kus/goats"
+  },
+  {
+    "address": "0x97f46dd70c8a97cd",
+    "goats": 32,
+    "traits": 210,
+    "find": "freezenft",
+    "collection": "https://goated-goats-filter.vercel.app/owners/find:freezenft/goats"
+  },
+  {
+    "address": "0x423eb1ea3cf14f82",
+    "goats": 32,
+    "traits": 692,
+    "find": "q2thec",
+    "collection": "https://goated-goats-filter.vercel.app/owners/find:q2thec/goats"
+  },
+  {
+    "address": "0xc3dafb040b255ed8",
+    "goats": 30,
+    "traits": 200,
+    "find": "nate9lives",
+    "collection": "https://goated-goats-filter.vercel.app/owners/find:nate9lives/goats"
+  },
+  {
+    "address": "0x6c8f345663491aa4",
+    "goats": 28,
+    "traits": 295,
+    "find": "johnlwilliams4",
+    "collection": "https://goated-goats-filter.vercel.app/owners/find:johnlwilliams4/goats"
+  },
+  {
+    "address": "0x2ad88ff518498ecc",
+    "goats": 27,
+    "traits": 238,
+    "find": "twintbeast",
+    "collection": "https://goated-goats-filter.vercel.app/owners/find:twintbeast/goats"
+  }
+]
