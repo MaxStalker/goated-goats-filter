@@ -1,0 +1,536 @@
+[
+  {
+    "slots": 5,
+    "name": "Black",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Brown",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Silver",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 6,
+    "name": "Clown",
+    "rarity": "epic",
+    "score": 30
+  },
+  {
+    "slots": 6,
+    "name": "Polka Dots",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "White",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Polka Dots",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 6,
+    "name": "Red",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Spotted",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 9,
+    "name": "Blue",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Polka Dots",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Clown",
+    "rarity": "epic",
+    "score": 30
+  },
+  {
+    "slots": 6,
+    "name": "Zebra",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Spotted",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Black",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Grey",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Zebra",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Green",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 8,
+    "name": "Zebra",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Silver",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Spotted",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Zebra",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Red",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Blue",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Giraffe",
+    "rarity": "epic",
+    "score": 30
+  },
+  {
+    "slots": 8,
+    "name": "Grey",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "White",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Brown",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Grey",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Grey",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Black",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Red",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Zebra",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Grey",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Giraffe",
+    "rarity": "epic",
+    "score": 30
+  },
+  {
+    "slots": 6,
+    "name": "Red",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Spotted",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Silver",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Blue",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Golden",
+    "rarity": "epic",
+    "score": 30
+  },
+  {
+    "slots": 5,
+    "name": "Red",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 8,
+    "name": "Grey",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Blue",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Blue",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Golden",
+    "rarity": "epic",
+    "score": 30
+  },
+  {
+    "slots": 7,
+    "name": "Polka Dots",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Silver",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Clown",
+    "rarity": "epic",
+    "score": 30
+  },
+  {
+    "slots": 5,
+    "name": "Spotted",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "White",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 8,
+    "name": "Polka Dots",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Black",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Clown",
+    "rarity": "epic",
+    "score": 30
+  },
+  {
+    "slots": 6,
+    "name": "Grey",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Spotted",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 7,
+    "name": "White",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 7,
+    "name": "Brown",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Blue",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 7,
+    "name": "Clown",
+    "rarity": "epic",
+    "score": 30
+  },
+  {
+    "slots": 5,
+    "name": "Zebra",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 6,
+    "name": "Psychedelic",
+    "rarity": "legendary",
+    "score": 45
+  },
+  {
+    "slots": 5,
+    "name": "Spotted",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 6,
+    "name": "Zebra",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Red",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Red",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Black",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Brown",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Silver",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Spotted",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Silver",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Clown",
+    "rarity": "epic",
+    "score": 30
+  },
+  {
+    "slots": 5,
+    "name": "Silver",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 8,
+    "name": "Polka Dots",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 6,
+    "name": "Red",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Golden",
+    "rarity": "epic",
+    "score": 30
+  },
+  {
+    "slots": 6,
+    "name": "Blue",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Red",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Red",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Spotted",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Giraffe",
+    "rarity": "epic",
+    "score": 30
+  },
+  {
+    "slots": 7,
+    "name": "Grey",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 5,
+    "name": "Brown",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 7,
+    "name": "Blue",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "White",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 7,
+    "name": "Black",
+    "rarity": "common",
+    "score": 10
+  },
+  {
+    "slots": 6,
+    "name": "Spotted",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Spotted",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 6,
+    "name": "Silver",
+    "rarity": "rare",
+    "score": 20
+  },
+  {
+    "slots": 5,
+    "name": "Blue",
+    "rarity": "common",
+    "score": 10
+  }
+]
