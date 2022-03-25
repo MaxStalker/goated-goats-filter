@@ -7,10 +7,40 @@ import { getSkinName } from "./utils";
 export default function Goats(props) {
   const { goats } = props;
   const { goatsPrices, traitsPrices } = useContext(PricesContext);
+
+  const sortByScore = (a, b) => {
+    const aScore = a.skinScore + a.traitsScore;
+    const bScore = b.skinScore + b.traitsScore;
+
+    if (aScore < bScore) {
+      return 1;
+    }
+    if (aScore > bScore) {
+      return -1;
+    }
+    return 0;
+  };
+
+  const sortBySlots = (a, b) => {
+    const aScore = a.traitSlots;
+    const bScore = b.traitSlots;
+
+    if (aScore < bScore) {
+      return 1;
+    }
+    if (aScore > bScore) {
+      return -1;
+    }
+    return 0;
+  };
   return (
     <GalleryDisplay
       key="goats"
       items={goats}
+      sort={sortBySlots}
+      group={(item) => {
+        return `${item.traitSlots} - ${item.metadata.skinFileName}`;
+      }}
       getRarity={(item) => {
         return item.metadata.skinRarity;
       }}
@@ -22,12 +52,14 @@ export default function Goats(props) {
         );
       }}
       renderItem={({ item, onClick, selected }) => {
-        const {skinFileName, skinRarity} = item.metadata
+        const goat = item.top || item;
+        const { id, metadata, equippedTraits, traitSlots } = goat;
+        const { skinFileName, skinRarity,  } = metadata;
         const skinName = getSkinName(skinFileName);
         const skinPrice = goatsPrices[skinRarity]
-          ? goatsPrices[skinRarity][item.traitSlots - 5]
+          ? goatsPrices[skinRarity][traitSlots - 5]
           : 0;
-        const traitsPrice = item.equippedTraits.reduce((acc, trait) => {
+        const traitsPrice = equippedTraits.reduce((acc, trait) => {
           let { rarity } = trait.metadata;
           rarity = rarity === "base" ? "common" : rarity;
           const price = traitsPrices[rarity]
@@ -37,15 +69,17 @@ export default function Goats(props) {
           return acc;
         }, 0);
         const totalPrice = parseFloat(skinPrice) + traitsPrice;
+
         return (
           <Goat
-            key={item.id}
-            goat={item}
+            key={id}
+            goat={goat}
             onClick={onClick}
             selected={selected}
             skinName={skinName}
             skinPrice={skinPrice}
             totalPrice={totalPrice}
+            stack={item.items || 1}
           />
         );
       }}

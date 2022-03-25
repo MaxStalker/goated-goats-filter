@@ -2,6 +2,22 @@ import styled from "styled-components";
 import { rarityColors } from "../../utils/colors";
 import { Link } from "react-router-dom";
 
+export const StackContainer = styled.div`
+  position: relative;
+`;
+
+export const StackCard = styled.div`
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  transform: ${({ stackOffset, step }) =>
+    `translate(${stackOffset}px, -${stackOffset * step}px)`};
+`;
+
 export const Container = styled.div`
   border-radius: 16px;
   background-color: white;
@@ -10,9 +26,10 @@ export const Container = styled.div`
   cursor: pointer;
   transform: translate(0, 0);
   transition: all 0.5s ease-in-out;
-
+  transform: ${({ stack = 1 }) =>
+    `translate(${2 * stack}px, ${-2 * stack}px)`};
   &:hover {
-    transform: translate(0px, -10px);
+    transform: ${({ stack = 1 }) => `translate(${2 * stack}px, ${-2 * (stack + 1) - 10}px)`};
     transition: all 0.1s;
     z-index: 5;
     box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.05);
@@ -118,6 +135,14 @@ export const RarityContainer = styled.div`
   height: 24px;
   margin-top: 20px;
   border-radius: 0 0 16px 16px;
+
+  ${({ bottom = false }) => {
+    if (bottom)
+      return `
+      position: absolute;
+      bottom: 0;
+    `;
+  }}
 
   a {
     display: flex;

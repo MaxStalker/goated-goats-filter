@@ -10,9 +10,11 @@ export default function GalleryDisplay(props) {
   const urlParams = extractParams(search);
   // console.log({urlParams})
 
-  const { items, query, getRarity, placeholder = "" } = props;
+  const { items, group, sort, query, getRarity, placeholder = "" } = props;
   const [selectedItems, setSelectedItems] = useState({});
   // console.log({selectedItems})
+
+  const [grouped, setGrouped] = useState(true)
 
   const [filterSelected, setFilterSelected] = useState(false);
   const [filteredItems, setFilterItems] = useState(items);
@@ -63,6 +65,41 @@ export default function GalleryDisplay(props) {
     });
   };
 
+  // Make a fallback if this is not provided
+  const sortingFunc =
+    sort ||
+    function () {
+      return 1;
+    };
+  const sortedItems = filteredItems.sort(sortingFunc);
+
+  let preparedList = sortedItems
+  if(grouped){
+    const groupedList = sortedItems.reduce((acc, item)=>{
+      const groupKey = group(item)
+
+      if(!acc[groupKey]){
+        acc[groupKey] = {
+          top: item,
+          items: 1
+        }
+      } else {
+        acc[groupKey].items += 1
+      }
+
+      return acc
+    },{})
+
+    preparedList = Object.keys(groupedList).map((key)=>{
+      const item= groupedList[key]
+      if(item.items > 1){
+        return item
+      } else {
+        return item.top
+      }
+    })
+  }
+
   const { renderItem } = props;
   return (
     <>
@@ -111,7 +148,7 @@ export default function GalleryDisplay(props) {
         />
       </SelectorBox>
       <Gallery>
-        {filteredItems.map((item) =>
+        {preparedList.map((item) =>
           renderItem({
             item,
             onClick: () => toggleItem(item.id),

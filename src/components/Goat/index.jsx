@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import {
+  StackContainer,
+  StackCard,
   Container,
   GoatName,
   ImageContainer,
@@ -27,17 +29,20 @@ export default function Goat(props) {
   const { traitsPrices } = useContext(PricesContext);
 
   // Data formatting
-  const { goat, selected, onClick, skinName, skinPrice, totalPrice, name, url } =
-    props;
-  const { owner } = useParams();
   const {
-    metadata,
-    traitSlots,
-    skinScore,
-    traitsScore,
-    equippedTraits,
-    id,
-  } = goat;
+    goat,
+    selected,
+    onClick,
+    skinName,
+    skinPrice,
+    totalPrice,
+    name,
+    url,
+    stack,
+  } = props;
+  const { owner } = useParams();
+  const { metadata, traitSlots, skinScore, traitsScore, equippedTraits, id } =
+    goat;
   const skinRarity = metadata.skinRarity; // capitalize(metadata.skinRarity);
   const imageAlt = `[${skinRarity}] ${skinName}`;
   const totalScore = skinScore + traitsScore;
@@ -83,53 +88,66 @@ export default function Goat(props) {
     secondRow = mappedTraits.slice(split);
   }
   const title = name || skinName;
+  const maxStack = Math.min(stack, 5);
+  const stackOffset = 2
   return (
-    <Container
-      onClick={onClick}
-      selected={selected}
-      title={`${selected ? "Remove from" : "Add to"} selection`}
-    >
-      <ImageContainer rarity={skinRarity}>
-        <GoatImage src={goat.image} alt={imageAlt} title={imageAlt} />
-      </ImageContainer>
-      <Content>
-        <GoatName rarity={skinRarity}>
-          {single && title}
-          {!single && (
-            <Row>
-              <Left>{title}</Left>
-              <Right>
-                {equippedTraits.length}/{traitSlots}
-              </Right>
-            </Row>
-          )}
-        </GoatName>
-        <SlotsContainer>
-          <SlotsRow key={"first"}>{firstRow}</SlotsRow>
-          {secondRow && <SlotsRow key={"second"}>{secondRow}</SlotsRow>}
-        </SlotsContainer>
-        <Values>
-          <ValueDisplay>
-            <Label>Skin Price</Label>
-            <Value>{skinPrice}</Value>
-          </ValueDisplay>
+    <StackContainer>
+      {stack > 1 &&
+        Array.from(Array(maxStack)).map((_, i) => {
+          return (
+            <StackCard key={`${i}-stack`} stackOffset={stackOffset * i} step={i}>
+              <RarityContainer rarity={skinRarity} bottom={true}></RarityContainer>
+            </StackCard>
+          );
+        })}
+      <Container
+        stack={stack}
+        onClick={onClick}
+        selected={selected}
+        title={`${selected ? "Remove from" : "Add to"} selection`}
+      >
+        <ImageContainer rarity={skinRarity}>
+          <GoatImage src={goat.image} alt={imageAlt} title={imageAlt} />
+        </ImageContainer>
+        <Content>
+          <GoatName rarity={skinRarity}>
+            {single && title}
+            {!single && (
+              <Row>
+                <Left>{title}</Left>
+                <Right>
+                  {equippedTraits.length}/{traitSlots}
+                </Right>
+              </Row>
+            )}
+          </GoatName>
+          <SlotsContainer>
+            <SlotsRow key={"first"}>{firstRow}</SlotsRow>
+            {secondRow && <SlotsRow key={"second"}>{secondRow}</SlotsRow>}
+          </SlotsContainer>
+          <Values>
+            <ValueDisplay>
+              <Label>Skin Price</Label>
+              <Value>{skinPrice}</Value>
+            </ValueDisplay>
 
-          <ValueDisplay>
-            <Label>Total Price</Label>
-            <Value>{totalPrice}</Value>
-          </ValueDisplay>
-        </Values>
-      </Content>
-      <RarityContainer rarity={skinRarity}>
-        <Link to={to}>
-          <Rarity rarity={skinRarity} className="pill">
-            <label className={"rarity"}>
-              {skinRarity} {totalScore}
-            </label>
-            <label className={"details"}>Show Details</label>
-          </Rarity>
-        </Link>
-      </RarityContainer>
-    </Container>
+            <ValueDisplay>
+              <Label>Total Price</Label>
+              <Value>{totalPrice}</Value>
+            </ValueDisplay>
+          </Values>
+        </Content>
+        <RarityContainer rarity={skinRarity}>
+          <Link to={to}>
+            <Rarity rarity={skinRarity} className="pill">
+              <label className={"rarity"}>
+                {skinRarity} {totalScore}
+              </label>
+              <label className={"details"}>Show Details</label>
+            </Rarity>
+          </Link>
+        </RarityContainer>
+      </Container>
+    </StackContainer>
   );
 }
