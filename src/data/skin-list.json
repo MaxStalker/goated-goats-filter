@@ -1,0 +1,226 @@
+{
+  "zebra": {
+    "meta": {
+      "thumbnailCID": "QmWxg7YymcNubURK4DjMbgYDiFhvaMdMpaUtCpMNjUoqt2",
+      "compositeSkinBodyFileName": "skin-body-body-zebra.png",
+      "compositeSkinHeadCID": "QmeX6LUD5Y7p45nnY4jpZDpW8nxyBwEzBh4RkFGnGP7gtP",
+      "skinRarity": "rare",
+      "compositeSkinHeadFileName": "head-head-zebra.png",
+      "skinFileName": "skin-zebra.png",
+      "compositeSkinBodyCID": "QmfQ2WxJ2TFMQvm8rv6HifoqD1iiE66Ux8nPtUzfKp7eCF"
+    },
+    "id": 9989,
+    "slotCount": 6,
+    "equippedTraits": []
+  },
+  "green": {
+    "meta": {
+      "thumbnailCID": "QmPDF2dGa8HMKhdYxHQviU5GhoHDS8bT6m3EjuAQJR4PS4",
+      "compositeSkinBodyFileName": "skin-body-body-green.png",
+      "compositeSkinHeadCID": "QmWXBYM197sBnWW8fjZn2jReqTq2cUni3wqaEzeDoHc3WM",
+      "skinRarity": "common",
+      "compositeSkinHeadFileName": "head-head-green.png",
+      "skinFileName": "skin-green.png",
+      "compositeSkinBodyCID": "Qmc1FjEdhcwqGG3FRLR574n7sSJQDtch8fr3whPUUzCx5z"
+    },
+    "id": 9967,
+    "slotCount": 5,
+    "equippedTraits": []
+  },
+  "polka_dots": {
+    "meta": {
+      "thumbnailCID": "QmYz4CnFmbZzBRbenEoEgqkxyTRXwSz9WLnD3GiTgNVtwS",
+      "compositeSkinBodyFileName": "skin-body-body-polka_dots.png",
+      "compositeSkinHeadCID": "QmTw14ZdUttqn65JproZ2zNJbYL5wFaV1Xtie91GZrN3YF",
+      "skinRarity": "rare",
+      "compositeSkinHeadFileName": "head-head-polka_dots.png",
+      "skinFileName": "skin-polka_dots.png",
+      "compositeSkinBodyCID": "QmZ4EaFHV6ikbJWvbxoYopkvPh6G3pFYzXpvBqVp9Epuzg"
+    },
+    "id": 9909,
+    "slotCount": 7,
+    "equippedTraits": []
+  },
+  "red": {
+    "meta": {
+      "thumbnailCID": "QmPBM2hu8cV5WYsKQrrUFqJkgtgJfNZ9Xy7vMhgXS7cKQB",
+      "compositeSkinBodyFileName": "skin-body-body-red.png",
+      "compositeSkinHeadCID": "QmYaCE6Xqvf46YMKtUFfv5MkRsBD6dZSMsjrKNoEqGHBQh",
+      "skinRarity": "common",
+      "compositeSkinHeadFileName": "head-head-red.png",
+      "skinFileName": "skin-red.png",
+      "compositeSkinBodyCID": "QmdtV32c5v1FvGF3WmigaDPHs6rmQ4etYtZMny5qKTGgfM"
+    },
+    "id": 9954,
+    "slotCount": 5,
+    "equippedTraits": []
+  },
+  "blue": {
+    "meta": {
+      "thumbnailCID": "QmQxQGirvgoz4f93A8qjr1HqNVePCbyxeM47zYZyn7Gd6Z",
+      "compositeSkinBodyFileName": "skin-body-body-blue.png",
+      "compositeSkinHeadCID": "QmRRoHjPjL6rVCaLhr2yqKUVERU6TuE2ArHGJM978g1FCz",
+      "skinRarity": "common",
+      "compositeSkinHeadFileName": "head-head-blue.png",
+      "skinFileName": "skin-blue.png",
+      "compositeSkinBodyCID": "QmbcSa3khQKV99ETXqjobxGpkHbiwG3SSzYuSSWSg7NYr2"
+    },
+    "id": 9818,
+    "slotCount": 7,
+    "equippedTraits": []
+  },
+  "white": {
+    "meta": {
+      "thumbnailCID": "QmUnDBhyv74624hdiK3NDbuK9heUHvnQRnPw88hhUd6etz",
+      "compositeSkinBodyFileName": "skin-body-body-white.png",
+      "compositeSkinHeadCID": "QmQfJapJnav9FZAC8N78D2PE4Yfk7yXnYmP7LZd3hQsV5D",
+      "skinRarity": "common",
+      "compositeSkinHeadFileName": "head-head-white.png",
+      "skinFileName": "skin-white.png",
+      "compositeSkinBodyCID": "QmcPqpjTZCnk6cgGceeVwDu9zbRgPidmwA7gj17kYP72p8"
+    },
+    "id": 9859,
+    "slotCount": 5,
+    "equippedTraits": []
+  },
+  "black": {
+    "meta": {
+      "thumbnailCID": "QmWYb2RTJFNRC3WAnWNVnfrDrHzSJ261M7fCkiAvmBcUX4",
+      "compositeSkinBodyFileName": "skin-body-body-black.png",
+      "compositeSkinHeadCID": "QmVVLTGn9J77Yq7QephUeqVgtZrC3WDbWgXA3pLQktN3hL",
+      "skinRarity": "common",
+      "compositeSkinHeadFileName": "head-head-black.png",
+      "skinFileName": "skin-black.png",
+      "compositeSkinBodyCID": "QmStWHtEoV16UGEKBUxCFMWWobTooAxDP4xMfkHcYFwP6n"
+    },
+    "id": 9851,
+    "slotCount": 8,
+    "equippedTraits": []
+  },
+  "golden": {
+    "meta": {
+      "thumbnailCID": "QmVhZZrYjDQzQfB6ntNimJaMPJfWtF6Geo5pyRXukCt9X1",
+      "compositeSkinBodyFileName": "skin-body-body-golden.png",
+      "compositeSkinHeadCID": "QmWNdK95grw5TeoC7VU1k9se9xrk15LmY33e5qfUqy2tcR",
+      "skinRarity": "epic",
+      "compositeSkinHeadFileName": "head-head-golden.png",
+      "skinFileName": "skin-golden.png",
+      "compositeSkinBodyCID": "QmV2WxTQGfVNu5wEgYk8zYFP5qFUd2DHxtPRx1TVZ97xwy"
+    },
+    "id": 9803,
+    "slotCount": 7,
+    "equippedTraits": []
+  },
+  "silver": {
+    "meta": {
+      "thumbnailCID": "QmQuPApWruNEtd3S1j683YNYTuWVmf5ccypAgiq5CJ168R",
+      "compositeSkinBodyFileName": "skin-body-body-silver.png",
+      "compositeSkinHeadCID": "QmR7zHRG83JAS56NVZWboVDMFa3Te9BJd6CSKK96bGXDkw",
+      "skinRarity": "rare",
+      "compositeSkinHeadFileName": "head-head-silver.png",
+      "skinFileName": "skin-silver.png",
+      "compositeSkinBodyCID": "Qmeaax6VJb5SenNzx2ULSEwEMr2yeD98EGERWC3tfcY9qy"
+    },
+    "id": 9945,
+    "slotCount": 6,
+    "equippedTraits": []
+  },
+  "brown": {
+    "meta": {
+      "thumbnailCID": "QmNgedEVuezj3ken4bGG6yFzzc1CArKvRRpk3FKzV4ewZg",
+      "compositeSkinBodyFileName": "skin-body-body-brown.png",
+      "compositeSkinHeadCID": "QmY6Xzioi5MHxBaBos95tkHfZr2heKgGBNMArGga1hF46i",
+      "skinRarity": "common",
+      "compositeSkinHeadFileName": "head-head-brown.png",
+      "skinFileName": "skin-brown.png",
+      "compositeSkinBodyCID": "Qme437ngQE3JaTdLXsgfrMd4qAPAzuQpQn97ZmZdTfUxAJ"
+    },
+    "id": 9950,
+    "slotCount": 5,
+    "equippedTraits": []
+  },
+  "stars": {
+    "meta": {
+      "thumbnailCID": "QmZNe8AANphywpU2E2pyD2ZUthvWDrmpj7jX9x8drBBt6P",
+      "compositeSkinBodyFileName": "skin-body-body-stars.png",
+      "compositeSkinHeadCID": "QmSM7rogtT7YfxFKFLRAfR4RzXdQkKNo5f6wjhgM88xko6",
+      "skinRarity": "legendary",
+      "compositeSkinHeadFileName": "head-head-stars.png",
+      "skinFileName": "skin-stars.png",
+      "compositeSkinBodyCID": "QmR9iS75gRNuKyWPQWracE5iKPWCa38X9DZfPLvVa94S62"
+    },
+    "id": 9870,
+    "slotCount": 6,
+    "equippedTraits": []
+  },
+  "spotted": {
+    "meta": {
+      "thumbnailCID": "QmdqbX6sGAwekHmYnsQwHvdAmsPewakUiMNeUREs6x4bgB",
+      "compositeSkinBodyFileName": "skin-body-body-spotted.png",
+      "compositeSkinHeadCID": "QmWnM4i7LCtbmgw1S3PqKJJ5vN9kWDzfbqSuY84oYmk5P4",
+      "skinRarity": "rare",
+      "compositeSkinHeadFileName": "head-head-spotted.png",
+      "skinFileName": "skin-spotted.png",
+      "compositeSkinBodyCID": "QmNNnC82WehmKj3pXBJqbm5aep8VUZgTyAQmbnXiE5E2gC"
+    },
+    "id": 9925,
+    "slotCount": 5,
+    "equippedTraits": []
+  },
+  "grey": {
+    "meta": {
+      "thumbnailCID": "QmT4GV6skWXCKXa9VLYkjbwahALEmMY943xfvax9XuPqXY",
+      "compositeSkinBodyFileName": "skin-body-body-grey.png",
+      "compositeSkinHeadCID": "Qme8WjxZNvSkR2L5YHSddtcSM1RZgTEtx4x9SFWKYE5aEx",
+      "skinRarity": "common",
+      "compositeSkinHeadFileName": "head-head-grey.png",
+      "skinFileName": "skin-grey.png",
+      "compositeSkinBodyCID": "QmSW6n65ApX86keks9Fg6yZy5YV6EVdc1c5sEP6bya68mi"
+    },
+    "id": 9947,
+    "slotCount": 6,
+    "equippedTraits": []
+  },
+  "psychedelic": {
+    "meta": {
+      "thumbnailCID": "QmSEz6AveaEC3Zqj9dAzwYgxF1zZRo3N4eg7jqQbSJx6hE",
+      "compositeSkinBodyFileName": "skin-body-body-psychedelic.png",
+      "compositeSkinHeadCID": "QmRKsU7vs6itUc8ckfmEnvFaLpRFKjHNkdjYbUHYDo1p5u",
+      "skinRarity": "legendary",
+      "compositeSkinHeadFileName": "head-head-psychedelic.png",
+      "skinFileName": "skin-psychedelic.png",
+      "compositeSkinBodyCID": "QmeghLKaKzRP9PbjmoXis5mGeCDuroTpYVX56eQFpUphMr"
+    },
+    "id": 9458,
+    "slotCount": 8,
+    "equippedTraits": []
+  },
+  "giraffe": {
+    "meta": {
+      "thumbnailCID": "QmcucvYteKWcAQan2mDVQBpkg1Z4XcmJFRJS6WjDxUFCLv",
+      "compositeSkinBodyFileName": "skin-body-body-giraffe.png",
+      "compositeSkinHeadCID": "QmQqSfwq9fduhtgJaam5XyonpAUCj1NLuQ3HcZP9Np3iU8",
+      "skinRarity": "epic",
+      "compositeSkinHeadFileName": "head-head-giraffe.png",
+      "skinFileName": "skin-giraffe.png",
+      "compositeSkinBodyCID": "QmRwt4pSQgouk9t81Q3MkXLnDqcjSziK2mBLGGYXEK8B5Z"
+    },
+    "id": 9981,
+    "slotCount": 5,
+    "equippedTraits": []
+  },
+  "clown": {
+    "meta": {
+      "thumbnailCID": "QmdbFXvELG3Pux5UsFc9nW86i9LYqgUn3N7iJWcPown8TT",
+      "compositeSkinBodyFileName": "skin-body-body-clown.png",
+      "compositeSkinHeadCID": "QmYzwcJPL4Gw7eXoPjvuZzy7qVfaHXBmcyLK3C5zWHxDs9",
+      "skinRarity": "epic",
+      "compositeSkinHeadFileName": "head-head-clown.png",
+      "skinFileName": "skin-clown.png",
+      "compositeSkinBodyCID": "QmcPqpjTZCnk6cgGceeVwDu9zbRgPidmwA7gj17kYP72p8"
+    },
+    "id": 9762,
+    "slotCount": 5,
+    "equippedTraits": []
+  }
+}

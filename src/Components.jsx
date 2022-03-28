@@ -207,10 +207,10 @@ export const Tabs = styled.div`
   padding: 4px;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: ${({ items = 2 }) => `repeat(${items}, 1fr)`};
   background-color: #ccc;
   height: 50px;
-  width: 300px;
+  width: ${({ items = 2 }) => `${items * 120}px`};
   margin-bottom: 10px;
   border-radius: 8px;
 `;

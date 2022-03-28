@@ -10,6 +10,7 @@ export const Container = styled.div`
   cursor: pointer;
   transform: translate(0, 0);
   transition: all 0.5s ease-in-out;
+  width: 100%;
 
   &:hover {
     transform: translate(0px, -10px);
@@ -25,6 +26,10 @@ export const ImageContainer = styled.div`
   background-color: ${({ rarity }) => `${rarityColors[rarity]}33`};
   position: relative;
   width: 100%;
+  margin-bottom: ${({ mb = 0 }) => mb};
+  &.small {
+    max-width: 120px;
+  }
 `;
 export const GoatImage = styled.img`
   width: 100%;
@@ -34,6 +39,7 @@ export const GoatImage = styled.img`
   z-index: ${({ order = 1 }) => order};
   top: 0;
   position: ${({ order = 1 }) => (order > 1 ? "absolute" : "relative")};
+}
 `;
 export const GoatName = styled.h3`
   width: 100%;
