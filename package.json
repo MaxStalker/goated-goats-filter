@@ -7,7 +7,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "scrap": "node ./scrapper/index.js",
-    "parse-events": "node ./scrapper events"
+    "parse-events": "node ./scrapper events",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
@@ -38,12 +40,20 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
     "@vitejs/plugin-react": "^1.0.7",
+    "babel-loader": "^8.2.4",
     "esm": "^3.2.25",
+    "graphql": "^16.3.0",
+    "graphql-request": "^4.1.0",
     "parse": "^3.4.1",
     "prettier": "^2.5.1",
-    "vite": "^2.8.0",
-    "graphql": "^16.3.0",
-    "graphql-request": "^4.1.0"
+    "vite": "^2.8.0"
   }
 }
