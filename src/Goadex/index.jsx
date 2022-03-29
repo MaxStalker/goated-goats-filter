@@ -70,6 +70,27 @@ export default function Goadex(props) {
     return acc;
   }, {});
 
+  const equippedTraitsData = goats.reduce((acc, goat) => {
+    const { equippedTraits } = goat;
+    if (equippedTraits.length > 0) {
+      console.log({ equippedTraits });
+      equippedTraits.forEach((trait) => {
+        const { metadata } = trait;
+        if (!acc[metadata.fileName]) {
+          acc[metadata.fileName] = {
+            trait: metadata,
+            amount: 1,
+          };
+        } else {
+          acc[metadata.fileName].amount += 1;
+        }
+      });
+    }
+    return acc;
+  }, {});
+
+  console.log({ equippedTraitsData });
+
   const traitsData = traits.reduce((acc, trait) => {
     const key = trait.metadata.fileName;
     if (!acc[key]) {
@@ -82,6 +103,8 @@ export default function Goadex(props) {
     }
     return acc;
   }, {});
+
+  console.log(traitsData);
 
   const skinList = Object.keys(skins).sort((a, b) => {
     const aScore = getRarityScore(skins[a].meta.skinRarity);
@@ -181,8 +204,11 @@ export default function Goadex(props) {
       <GoadexContainer>
         {traitList.map((traitName) => {
           const trait = tData[traitName];
-          const amount = traitsData[trait.fileName]
+          let amount = traitsData[trait.fileName]
             ? traitsData[trait.fileName].amount
+            : 0;
+          amount += equippedTraitsData[trait.fileName]
+            ? equippedTraitsData[trait.fileName].amount
             : 0;
           return <SingleGoadexTrait trait={trait} amount={amount} />;
         })}
