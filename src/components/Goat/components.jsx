@@ -32,12 +32,15 @@ export const ImageContainer = styled.div`
   }
 `;
 export const GoatImage = styled.img`
-  width: 100%;
+  height: ${({ priority = "width" }) =>
+    priority === "width" ? "auto" : "100%"};
+  width: ${({ priority = "width" }) =>
+    priority === "height" ? "auto" : "100%"};
   max-width: 300px;
-  height: auto;
   display: block;
-  z-index: ${({ order = 1 }) => order};
+  position: relative;
   top: 0;
+  z-index: ${({ elevate = 2 }) => elevate};
   position: ${({ order = 1 }) => (order > 1 ? "absolute" : "relative")};
 }
 `;
@@ -47,9 +50,12 @@ export const GoatName = styled.h3`
   font-size: 20px;
   margin: 0;
   color: ${({ rarity }) => rarityColors[rarity]};
-  white-space: nowrap;
+  white-space: ${({ wrap = "nowrap" }) => wrap};
   text-overflow: ellipsis;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Row = styled.div`
