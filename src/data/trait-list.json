@@ -1,0 +1,914 @@
+{
+  "eyes-open": {
+    "traitSlot": "eyes",
+    "thumbnailCID": "QmTfMKhMzE2zhtS2bFyBcGb9YgMcgJmTeBVMh3neVimkAH",
+    "fileName": "eyes-open.png",
+    "rarity": "base"
+  },
+  "mouths-neutral": {
+    "thumbnailCID": "QmXrYbSV4ZNuYyk1EXMNqUCwmgJx6zcnNbEdFy5Y835XiB",
+    "fileName": "mouths-neutral.png",
+    "rarity": "base",
+    "traitSlot": "mouths"
+  },
+  "neck-neck-scarf-yellow": {
+    "rarity": "common",
+    "thumbnailCID": "QmYqqtB2WETKpKYy64FRmjt84TqkwFuRRpYjJF2hWtNya6",
+    "traitSlot": "neck",
+    "fileName": "neck-neck-scarf-yellow.png"
+  },
+  "head-mouth-moustache-handlebar": {
+    "rarity": "common",
+    "fileName": "head-mouth-moustache-handlebar.png",
+    "traitSlot": "head-mouth",
+    "thumbnailCID": "QmcMfeP8osvmznZiCWqeT7eooN54JmCbUeuU4eo9dS4b7k"
+  },
+  "mouths-angry": {
+    "rarity": "common",
+    "traitSlot": "mouths",
+    "fileName": "mouths-angry.png",
+    "thumbnailCID": "QmfQQ1VP76YoRfJaqF673M3J6rShNEiPGvL5i8SsQLLtHV"
+  },
+  "mouths-braces": {
+    "rarity": "epic",
+    "thumbnailCID": "QmeEsCYZQxKrSCSX5HyLdr3Z1gfrsjQM2RqhiV9jDnk5GM",
+    "fileName": "mouths-braces.png",
+    "traitSlot": "mouths"
+  },
+  "mouths-popsicle": {
+    "fileName": "mouths-popsicle.png",
+    "traitSlot": "mouths",
+    "thumbnailCID": "QmNQfQwympZVU6QG3ZrrgwJEXSBnR6zUFKzpTKAnsz7zs2",
+    "rarity": "rare"
+  },
+  "head-hat-hat-cowboy-white": {
+    "traitSlot": "head-hat",
+    "rarity": "epic",
+    "fileName": "head-hat-hat-cowboy-white.png",
+    "thumbnailCID": "QmUgLiyWqJqzY8cw6d8SGsDtbyewVSSFFjKq29qCqP61wJ"
+  },
+  "neck-neck-scarf-green": {
+    "rarity": "common",
+    "thumbnailCID": "QmT9yeoYpyswpstrKi5LeT9MCovgCdPGhyXWv4qFhWsKVm",
+    "traitSlot": "neck",
+    "fileName": "neck-neck-scarf-green.png"
+  },
+  "background-brick_night": {
+    "rarity": "common",
+    "fileName": "background-brick_night.png",
+    "traitSlot": "background",
+    "thumbnailCID": "QmPjPaUus4pukYzFte9U6GknRy2sYUxRpNDEJ2hxp4Lt94"
+  },
+  "body-accessory-back-tennis-racket": {
+    "rarity": "rare",
+    "thumbnailCID": "QmQ1EptsNLAG4d5BdpZeEvRaLWQoKM2oQpQefZoPcYmyUm",
+    "fileName": "body-accessory-back-tennis-racket.png",
+    "traitSlot": "body-accessory"
+  },
+  "clothes-trenchcoat": {
+    "fileName": "clothes-trenchcoat.png",
+    "traitSlot": "clothes",
+    "thumbnailCID": "QmVNDTsREDXPRKf1Vt7gcDcBFBzWALATsDHX8EtBNB1M74",
+    "rarity": "epic"
+  },
+  "head-eyes-blindfold": {
+    "rarity": "common",
+    "thumbnailCID": "QmXrCeHijRma65ATNciBYdcDfEBkDi4z8pwXY1PjF91btf",
+    "traitSlot": "head-eyes",
+    "fileName": "head-eyes-blindfold.png"
+  },
+  "clothes-tshirt-black": {
+    "rarity": "common",
+    "fileName": "clothes-tshirt-black.png",
+    "traitSlot": "clothes",
+    "thumbnailCID": "QmcYUaqaxMYaqieeLZDYm8Q1qdtiYWEN4FU8XNZeHVoRHQ"
+  },
+  "head-hat-hat-do-rag-blue": {
+    "rarity": "common",
+    "traitSlot": "head-hat",
+    "fileName": "head-hat-hat-do-rag-blue.png",
+    "thumbnailCID": "QmdnadnCAd35xqVwWG9Vp9tnn7HRpBcdT4S97rbGBt4Pix"
+  },
+  "head-hat-hat-baseball-backwards-yellow": {
+    "traitSlot": "head-hat",
+    "rarity": "rare",
+    "fileName": "head-hat-hat-baseball-backwards-yellow.png",
+    "thumbnailCID": "QmNoRq6caJY9Gz2dp6dyFLwxEJoGnhC1Y3QW8Df1gSBSzL"
+  },
+  "head-hat-hat-baseball-grey": {
+    "rarity": "common",
+    "thumbnailCID": "QmRWd7ivftAMrtyqiMMc6nvft49ng14s4HG6dXkUxFfMVf",
+    "traitSlot": "head-hat",
+    "fileName": "head-hat-hat-baseball-grey.png"
+  },
+  "clothes-tshirt-orange": {
+    "rarity": "common",
+    "fileName": "clothes-tshirt-orange.png",
+    "traitSlot": "clothes",
+    "thumbnailCID": "QmXwC8x9CtR413GSxoskrtsbLcYqeeaGonjXSGHGf4tTSS"
+  },
+  "clothes-hoodie-red": {
+    "rarity": "common",
+    "traitSlot": "clothes",
+    "fileName": "clothes-hoodie-red.png",
+    "thumbnailCID": "QmfHRDx5jcKrjNYkhr4dcHfpctFVdYWzZzWUiXMkkcP27m"
+  },
+  "head-hat-helmet-football": {
+    "rarity": "epic",
+    "thumbnailCID": "QmY2TfZTs2PfGsgQjdQxqXMrr1k26fZHRHzhFkWZZtqWSK",
+    "fileName": "head-hat-helmet-football.png",
+    "traitSlot": "head-hat"
+  },
+  "head-hat-hat-cowboy-brown": {
+    "fileName": "head-hat-hat-cowboy-brown.png",
+    "traitSlot": "head-hat",
+    "thumbnailCID": "Qmd9Caf4nVXyhUaBuwxvGoK8jG27MMBzyJmkLTCHfksfez",
+    "rarity": "rare"
+  },
+  "clothes-tshirt-jersey": {
+    "traitSlot": "clothes",
+    "rarity": "rare",
+    "fileName": "clothes-tshirt-jersey.png",
+    "thumbnailCID": "QmeAyCxadD6xuGxpvP9Mfe2aKxj4ZcSzww7E71oogfWWeu"
+  },
+  "background-yellow": {
+    "rarity": "common",
+    "thumbnailCID": "QmexHEHgJ68FuisdEQiug2aDFzDui5pcBUQdUTk92DBXV4",
+    "traitSlot": "background",
+    "fileName": "background-yellow.png"
+  },
+  "clothes-tshirt-pink": {
+    "rarity": "common",
+    "fileName": "clothes-tshirt-pink.png",
+    "traitSlot": "clothes",
+    "thumbnailCID": "QmZtNzMyHs8p1pCArcTpf1EBk35ZkgsjWwTDoTLTdLxBmw"
+  },
+  "clothes-tshirt-purple": {
+    "rarity": "common",
+    "traitSlot": "clothes",
+    "fileName": "clothes-tshirt-purple.png",
+    "thumbnailCID": "QmV98sTSBpi3Gw28TN7npKJT7C5buty8pfCtBDzQs7HxLT"
+  },
+  "eyes-dead": {
+    "fileName": "eyes-dead.png",
+    "traitSlot": "eyes",
+    "thumbnailCID": "QmWXwCPbF2oJdNSsV3zLD14BLaqT4MwHHggbW4WywrHp2q",
+    "rarity": "rare"
+  },
+  "head-hat-hat-baseball-orange": {
+    "traitSlot": "head-hat",
+    "rarity": "rare",
+    "fileName": "head-hat-hat-baseball-orange.png",
+    "thumbnailCID": "QmfAUMwwjyFfXNYJkFRdPQ7Eekvsg4dvgaXiFZPkcXe3tT"
+  },
+  "eyes-closed": {
+    "rarity": "common",
+    "thumbnailCID": "QmRPWf2hQAsk8thHnde7CR6DSqXfTq4dWF7fT66kdCTiUc",
+    "traitSlot": "eyes",
+    "fileName": "eyes-closed.png"
+  },
+  "clothes-tshirt-yellow": {
+    "rarity": "common",
+    "fileName": "clothes-tshirt-yellow.png",
+    "traitSlot": "clothes",
+    "thumbnailCID": "QmNkJaV54vq6JmzNHxZF7rZv22DRC3kCrTMxTMsZ7jDxKc"
+  },
+  "clothes-hoodie-blue": {
+    "rarity": "common",
+    "traitSlot": "clothes",
+    "fileName": "clothes-hoodie-blue.png",
+    "thumbnailCID": "QmYuEsNXuCyXbRmJqsKuMe1LpfCBezisV9odpZKtE8Zp9m"
+  },
+  "head-hat-hat-beret-green": {
+    "rarity": "epic",
+    "thumbnailCID": "QmVqdxDHaoP6YoWX4kpQ5NW7TK82GH9RqWBug3sHqRYsQh",
+    "fileName": "head-hat-hat-beret-green.png",
+    "traitSlot": "head-hat"
+  },
+  "mouths-grin-gold-tooth": {
+    "traitSlot": "mouths",
+    "rarity": "epic",
+    "fileName": "mouths-grin-gold-tooth.png",
+    "thumbnailCID": "QmSQrDGwZB8akSdTZwG4zSm82RgZUHiomnqUyXh6bqVZN7"
+  },
+  "eyes-wide": {
+    "rarity": "common",
+    "thumbnailCID": "QmSt8hDeSxRg1QbQpa3uFkELRP6nk8xoM33PcqGBw14qPd",
+    "traitSlot": "eyes",
+    "fileName": "eyes-wide.png"
+  },
+  "neck-neck-scarf-red": {
+    "rarity": "common",
+    "fileName": "neck-neck-scarf-red.png",
+    "traitSlot": "neck",
+    "thumbnailCID": "QmV4iuE4aHacRc4XA2nZoQ3U91KYHWjkusMpXTQZrHYiX1"
+  },
+  "background-blue": {
+    "rarity": "common",
+    "traitSlot": "background",
+    "fileName": "background-blue.png",
+    "thumbnailCID": "QmUcftGMixrzSnhX7ueKEYmdHTXZMrEjVPxUJYW357WrDX"
+  },
+  "clothes-suit-pinstripe": {
+    "fileName": "clothes-suit-pinstripe.png",
+    "traitSlot": "clothes",
+    "thumbnailCID": "Qmeo9cXSiEzfDwuuvyCGiMnFW73QUU57Ya77ES2DeF1i7N",
+    "rarity": "rare"
+  },
+  "head-hat-hat-beret-black": {
+    "traitSlot": "head-hat",
+    "rarity": "rare",
+    "fileName": "head-hat-hat-beret-black.png",
+    "thumbnailCID": "QmZSveGda6R5CSP5A6zKhcPZAsejD7uJnZ9rkd1iNwdjpf"
+  },
+  "head-hat-hat-baseball-backwards-red": {
+    "rarity": "common",
+    "thumbnailCID": "Qmc4WqExtESA4qZiB33tDtgDBJuB5zx12xdyuTjSUHjW4j",
+    "traitSlot": "head-hat",
+    "fileName": "head-hat-hat-baseball-backwards-red.png"
+  },
+  "head-eyes-blindfold-yellow": {
+    "rarity": "rare",
+    "thumbnailCID": "QmQNBSCLojAGkXjgjatZ7ZKFVd5Rm9LsCxnTQVtbATdYFP",
+    "fileName": "head-eyes-blindfold-yellow.png",
+    "traitSlot": "head-eyes"
+  },
+  "clothes-knight-red": {
+    "traitSlot": "clothes",
+    "rarity": "epic",
+    "fileName": "clothes-knight-red.png",
+    "thumbnailCID": "QmXQA3EKWVcSV8H6JfkMYyYu4N6K6QdbmAREgnRh6Ah54M"
+  },
+  "head-hat-horn-short-grey": {
+    "rarity": "common",
+    "traitSlot": "head-hat",
+    "fileName": "head-hat-horn-short-grey.png",
+    "thumbnailCID": "Qme5deABLT17WXc3YR2AUHrUkbui3UUw48LwUCabbmbTpy"
+  },
+  "head-hat-horn-short-black": {
+    "rarity": "epic",
+    "thumbnailCID": "QmU7fLSyfv8bHnBbR8yQRm15DG47FkfPY7dtyDy9QpjpJT",
+    "fileName": "head-hat-horn-short-black.png",
+    "traitSlot": "head-hat"
+  },
+  "mouths-donut": {
+    "fileName": "mouths-donut.png",
+    "traitSlot": "mouths",
+    "thumbnailCID": "QmUHBGiqLre3amRndve4J2zfPN2UcYoBycjHQrr4Sq3KqR",
+    "rarity": "legendary"
+  },
+  "background-violet": {
+    "rarity": "common",
+    "thumbnailCID": "QmQkzzBpQKQZSa7dW5u58qxVnKC16RzvmZAH6GRjCMZyAJ",
+    "traitSlot": "background",
+    "fileName": "background-violet.png"
+  },
+  "neck-neck-medal-wood": {
+    "rarity": "common",
+    "traitSlot": "neck",
+    "fileName": "neck-neck-medal-wood.png",
+    "thumbnailCID": "QmaVAhaPzG6TxXv4zi1J3VunisDeYj8aBakb5jey6t21dT"
+  },
+  "eyes-bloodshot": {
+    "fileName": "eyes-bloodshot.png",
+    "traitSlot": "eyes",
+    "thumbnailCID": "QmQ2kY9euD5XsQyFChYfsQtf8SsWU6m5PNjBpHpVgMBjGx",
+    "rarity": "epic"
+  },
+  "head-hat-horn-curly-brown": {
+    "traitSlot": "head-hat",
+    "rarity": "rare",
+    "fileName": "head-hat-horn-curly-brown.png",
+    "thumbnailCID": "QmeZwmUmy4LRH2AEydh3WTU3TrBQbueFaVBoDTc2S1GZmG"
+  },
+  "clothes-hoodie-lime": {
+    "rarity": "common",
+    "thumbnailCID": "QmQzqZSbxJns3CLV6xmzHRUdoQg9vfkiBzvudgCngG2GtU",
+    "traitSlot": "clothes",
+    "fileName": "clothes-hoodie-lime.png"
+  },
+  "background-green": {
+    "rarity": "common",
+    "traitSlot": "background",
+    "fileName": "background-green.png",
+    "thumbnailCID": "QmSbDYX9rKQsmC21V9i6JR6rWVvLGD5HLrX5RdzAnE7Gty"
+  },
+  "head-mouth-mask-blue": {
+    "fileName": "head-mouth-mask-blue.png",
+    "traitSlot": "head-mouth",
+    "thumbnailCID": "QmdHsTZ74mSEFqqGRt8i6ZEme2B1cKA7DWEE9Q1pQn9FBo",
+    "rarity": "rare"
+  },
+  "clothes-hoodie-pink": {
+    "rarity": "common",
+    "traitSlot": "clothes",
+    "fileName": "clothes-hoodie-pink.png",
+    "thumbnailCID": "QmdPD5Cc76VC569kwF1XuQx153ZtqRz1ftk3ztewmzcaJB"
+  },
+  "mouths-grin": {
+    "rarity": "common",
+    "thumbnailCID": "QmVsXpyFFBsCEtDVcAVwGe8K3J2tts439yNsA5bVfCwS8J",
+    "traitSlot": "mouths",
+    "fileName": "mouths-grin.png"
+  },
+  "eyes-open-red": {
+    "rarity": "common",
+    "traitSlot": "eyes",
+    "fileName": "eyes-open-red.png",
+    "thumbnailCID": "Qma5if1msdkRyZ7qPpndSq8Qw6ngMgkhjoi4LmrNfpJ7YR"
+  },
+  "eyes-open-glow-green": {
+    "fileName": "eyes-open-glow-green.png",
+    "traitSlot": "eyes",
+    "thumbnailCID": "QmeTiRh4FpgAxzf71bb2RreVU6HS9Yr1Tda3DgxBCHXD59",
+    "rarity": "rare"
+  },
+  "head-eyes-glasses-kamina": {
+    "rarity": "epic",
+    "thumbnailCID": "QmZPDsqMwQShRX82HHTYLi8EyMNQpeRv2WH7Ld9FTakKKa",
+    "fileName": "head-eyes-glasses-kamina.png",
+    "traitSlot": "head-eyes"
+  },
+  "head-eyes-glasses-red": {
+    "fileName": "head-eyes-glasses-red.png",
+    "traitSlot": "head-eyes",
+    "thumbnailCID": "QmaSj2jbZdXMD3vKBiRTcwSXHs5CjmdLeziuwQpeTBPtJM",
+    "rarity": "rare"
+  },
+  "clothes-knight-white": {
+    "traitSlot": "clothes",
+    "rarity": "epic",
+    "fileName": "clothes-knight-white.png",
+    "thumbnailCID": "Qmcy76SX418dxUGbVFk6ndBrF67vJNyuD3wRVvr7XL1ud4"
+  },
+  "eyes-marbles": {
+    "rarity": "common",
+    "thumbnailCID": "QmYMXRQL1nqNnTmWW2X8r2fqPk5tDyAK4iZgyqTCxP4SiR",
+    "traitSlot": "eyes",
+    "fileName": "eyes-marbles.png"
+  },
+  "clothes-hoodie-black": {
+    "rarity": "common",
+    "traitSlot": "clothes",
+    "fileName": "clothes-hoodie-black.png",
+    "thumbnailCID": "Qmckwq13Us2E7QdCmLAmZsdzXFJQg9kr4jUwaG3PneWHte"
+  },
+  "eyes-open-glow-teal": {
+    "rarity": "rare",
+    "thumbnailCID": "QmPaP8LmATkW43KDS8DK39DW5JAcWgYfQYM6a4WHk4bfS8",
+    "fileName": "eyes-open-glow-teal.png",
+    "traitSlot": "eyes"
+  },
+  "clothes-football-jersey": {
+    "fileName": "clothes-football-jersey.png",
+    "traitSlot": "clothes",
+    "thumbnailCID": "QmckppzyJFLYnSV1zGgatRvWGFHQq26A13zEYq5bzedVxB",
+    "rarity": "rare"
+  },
+  "head-hat-hat-baseball-lime": {
+    "traitSlot": "head-hat",
+    "rarity": "rare",
+    "fileName": "head-hat-hat-baseball-lime.png",
+    "thumbnailCID": "QmdAxiQtVFCaHr66JQV3Dx25C1DE2LmCdih4N3Ktf47hms"
+  },
+  "eyes-open-yellow": {
+    "rarity": "common",
+    "traitSlot": "eyes",
+    "fileName": "eyes-open-yellow.png",
+    "thumbnailCID": "QmfVSXrBcTxJTB8XzGWpQRCdyvKTqmRzuSjXGUo9z3JB5N"
+  },
+  "head-hat-horn-unicorn-basic": {
+    "rarity": "rare",
+    "thumbnailCID": "QmTybyN2TrkdogMWa1KXueZSzcxeFWXpY2zuFkV16H6nDC",
+    "fileName": "head-hat-horn-unicorn-basic.png",
+    "traitSlot": "head-hat"
+  },
+  "neck-neck-medal-gold": {
+    "traitSlot": "neck",
+    "rarity": "epic",
+    "fileName": "neck-neck-medal-gold.png",
+    "thumbnailCID": "QmQTsfQWgCGyKznmGtEkHpxnaVnRCz4BKS4BqSa76ibWNs"
+  },
+  "background-red": {
+    "rarity": "common",
+    "thumbnailCID": "QmRHVFHPZVg77x6siZrkpqKhe1ciEVtNZ7kCHuFgMQ1WKG",
+    "traitSlot": "background",
+    "fileName": "background-red.png"
+  },
+  "eyes-cry": {
+    "rarity": "epic",
+    "thumbnailCID": "QmbyyzkEB4dZ9zH17Fmuf8azJNPMcp4ooie7yFrFSbRQ5a",
+    "fileName": "eyes-cry.png",
+    "traitSlot": "eyes"
+  },
+  "head-eyes-glasses": {
+    "fileName": "head-eyes-glasses.png",
+    "traitSlot": "head-eyes",
+    "thumbnailCID": "QmWb2z5MFsEZGit7GbR5NuMrMezfS5FpigcRVWdH87T495",
+    "rarity": "rare"
+  },
+  "background-underwater": {
+    "rarity": "common",
+    "thumbnailCID": "QmVyFfUuhRJcnc5KPsrdzBNZvKcTeMPxJSrGNd87m93QCn",
+    "traitSlot": "background",
+    "fileName": "background-underwater.png"
+  },
+  "head-ears-earring-hoops": {
+    "rarity": "rare",
+    "thumbnailCID": "QmNQ9gzC1AQS4Po48jWQCtYFfxDSwKMgWZzKaRSpoaVrFg",
+    "fileName": "head-ears-earring-hoops.png",
+    "traitSlot": "head-ears"
+  },
+  "head-hat-hat-baseball-blue": {
+    "rarity": "common",
+    "thumbnailCID": "Qmb5so87RfXU6c16QFoVRniHushtdn94ZmhuKmrviMDmGG",
+    "traitSlot": "head-hat",
+    "fileName": "head-hat-hat-baseball-blue.png"
+  },
+  "clothes-tshirt-lime": {
+    "rarity": "common",
+    "fileName": "clothes-tshirt-lime.png",
+    "traitSlot": "clothes",
+    "thumbnailCID": "QmXJBU56qhK5QR9WMPhC6e8kqRccuwjR9vZP2CzmETKfrz"
+  },
+  "clothes-knight-blue": {
+    "rarity": "epic",
+    "thumbnailCID": "QmczF7ZZFtzauoobGh7uDZAkwV6z8TbQHyU79f2snxZYeW",
+    "fileName": "clothes-knight-blue.png",
+    "traitSlot": "clothes"
+  },
+  "neck-neck-medal-silver": {
+    "fileName": "neck-neck-medal-silver.png",
+    "traitSlot": "neck",
+    "thumbnailCID": "QmXasE5mYBeDkB64ewep1aLuhbxLqg2JsSSyQnzB6GVHq8",
+    "rarity": "rare"
+  },
+  "clothes-hoodie-yellow": {
+    "rarity": "common",
+    "fileName": "clothes-hoodie-yellow.png",
+    "traitSlot": "clothes",
+    "thumbnailCID": "QmZivFjcG5KmvkaPquxRQ1kjgCaNctDV7nhkD7MHwfXq4M"
+  },
+  "head-hat-hat-baseball-red": {
+    "rarity": "common",
+    "traitSlot": "head-hat",
+    "fileName": "head-hat-hat-baseball-red.png",
+    "thumbnailCID": "QmPE3XZaB1QRw4EvrACqTkReTYGvJFAFb1tktJzDvvhyi3"
+  },
+  "head-hat-hat-baseball-pink": {
+    "fileName": "head-hat-hat-baseball-pink.png",
+    "traitSlot": "head-hat",
+    "thumbnailCID": "QmZgVhRKy8ZA71BVJjk8mJ9As7fKJCxoLX2P2TQk9WtqZb",
+    "rarity": "rare"
+  },
+  "eyes-angry": {
+    "traitSlot": "eyes",
+    "rarity": "rare",
+    "fileName": "eyes-angry.png",
+    "thumbnailCID": "QmY5VA54eBLbpe7JpVpLShrzX8xr4TGb7WbiEtt3kFHKLu"
+  },
+  "neck-neck-medal-bronze": {
+    "rarity": "common",
+    "fileName": "neck-neck-medal-bronze.png",
+    "traitSlot": "neck",
+    "thumbnailCID": "QmTALGbPrFKz4upF2aEkaty4W1svrdZdxyHLMmreFEKNWT"
+  },
+  "head-hat-hat-do-rag-orange": {
+    "fileName": "head-hat-hat-do-rag-orange.png",
+    "traitSlot": "head-hat",
+    "thumbnailCID": "QmZi3DdKJsdTHydzV3t449PYbYDhZkFJCNNBy4qXE48Tr4",
+    "rarity": "rare"
+  },
+  "background-orange": {
+    "rarity": "common",
+    "thumbnailCID": "QmQvvke8t8DLDmDXdGacTkWrZjcgU6jehwA9YKc8XifxWq",
+    "traitSlot": "background",
+    "fileName": "background-orange.png"
+  },
+  "mouths-tongue": {
+    "traitSlot": "mouths",
+    "rarity": "rare",
+    "fileName": "mouths-tongue.png",
+    "thumbnailCID": "QmcbLFbdnVJKMRjy4osXkvqSkJxvbR5mdLumNQZ6fcUMzp"
+  },
+  "head-hat-hat-trucker": {
+    "rarity": "common",
+    "thumbnailCID": "QmQrjjAWCKEJfFp6MktPjdFM8uKy9Uv8U2Bgx2nTWWp64X",
+    "traitSlot": "head-hat",
+    "fileName": "head-hat-hat-trucker.png"
+  },
+  "eyes-open-blue": {
+    "rarity": "common",
+    "fileName": "eyes-open-blue.png",
+    "traitSlot": "eyes",
+    "thumbnailCID": "QmTrDiyvBiuVNDydYCosvG8g9oKkLpyPThwQ72i8JLrwp7"
+  },
+  "body-accessory-back-guitar": {
+    "traitSlot": "body-accessory",
+    "rarity": "epic",
+    "fileName": "body-accessory-back-guitar.png",
+    "thumbnailCID": "QmT4EmBMRANuDgaWAHJmTPZUY55oArFi7VhPVxHUcMzSS7"
+  },
+  "head-hat-horn-short-brown": {
+    "rarity": "epic",
+    "thumbnailCID": "QmaLgF3oa3yte9jMVZmGM1xweEUNhomuVaq8kAKMh8wTXA",
+    "fileName": "head-hat-horn-short-brown.png",
+    "traitSlot": "head-hat"
+  },
+  "background-brick": {
+    "rarity": "common",
+    "traitSlot": "background",
+    "fileName": "background-brick.png",
+    "thumbnailCID": "QmfQaULqtsKo81aroJKSwPeSHDDFd4eDaxqZBQb9ay9t6Y"
+  },
+  "body-accessory-back-halbard": {
+    "rarity": "epic",
+    "thumbnailCID": "QmbwydoPqizVPBR3yZKuCFeZ7LQv59yhNC8MNs1bzz9Qa7",
+    "fileName": "body-accessory-back-halbard.png",
+    "traitSlot": "body-accessory"
+  },
+  "neck-neck-necklace-gold": {
+    "traitSlot": "neck",
+    "rarity": "epic",
+    "fileName": "neck-neck-necklace-gold.png",
+    "thumbnailCID": "QmUcTS5gDeuLn5U4Uwpvo9nEGhpDqaYAvCfDzCZNHKAKmG"
+  },
+  "head-mouth-mask-medical": {
+    "rarity": "common",
+    "fileName": "head-mouth-mask-medical.png",
+    "traitSlot": "head-mouth",
+    "thumbnailCID": "QmepXK7iubNoatoM9M9k7DuX1tsPQffhfdq2ySkoyffRVF"
+  },
+  "head-hat-hat-baseball-backwards-lime": {
+    "rarity": "rare",
+    "thumbnailCID": "QmYZvMabmjsZnSqJYmhuBw96krRdRZcH5TaiePTVCCtmQe",
+    "fileName": "head-hat-hat-baseball-backwards-lime.png",
+    "traitSlot": "head-hat"
+  },
+  "clothes-tshirt-red": {
+    "rarity": "common",
+    "fileName": "clothes-tshirt-red.png",
+    "traitSlot": "clothes",
+    "thumbnailCID": "QmWKHxCx9G94Rez3xe48DzFUySGg7ZYAJH33t54zx8MsF6"
+  },
+  "clothes-knight-grey": {
+    "rarity": "epic",
+    "thumbnailCID": "QmctwZM56C7u5cLhLLR1A5epcYHuDK96D5EQLEVqgUResY",
+    "fileName": "clothes-knight-grey.png",
+    "traitSlot": "clothes"
+  },
+  "clothes-suit-business": {
+    "traitSlot": "clothes",
+    "rarity": "rare",
+    "fileName": "clothes-suit-business.png",
+    "thumbnailCID": "QmYsCpkgqPcaosq2JoBSEw7vWwXnUaHMC5mMvJj8qH9xEq"
+  },
+  "eyes-open-glow-magenta": {
+    "rarity": "rare",
+    "thumbnailCID": "QmcekgjGFixzk5PC2ap7y2T6xYD7E9T7oAvwkStFMQ2QMX",
+    "fileName": "eyes-open-glow-magenta.png",
+    "traitSlot": "eyes"
+  },
+  "head-mouth-cigarette": {
+    "fileName": "head-mouth-cigarette.png",
+    "traitSlot": "head-mouth",
+    "thumbnailCID": "QmXzshcDsoBnNNzroQYGJ8bK3gavVSu9zic69gPFK58u7B",
+    "rarity": "epic"
+  },
+  "head-hat-horn-unicorn-green": {
+    "traitSlot": "head-hat",
+    "rarity": "epic",
+    "fileName": "head-hat-horn-unicorn-green.png",
+    "thumbnailCID": "QmdT5nsymSipiHFh3MhGd5zBrowd6nh6WPrnV5QPUqm9JU"
+  },
+  "clothes-basketball-kobe": {
+    "rarity": "legendary",
+    "thumbnailCID": "QmeoEE8Ad2WonUPmmsohobziSRi67oYocjjDQ2TjVck5cJ",
+    "fileName": "clothes-basketball-kobe.png",
+    "traitSlot": "clothes"
+  },
+  "mouths-snake-tounge": {
+    "fileName": "mouths-snake-tounge.png",
+    "traitSlot": "mouths",
+    "thumbnailCID": "QmRcSLaqedygNhjQLwpEeQZbNJCt8WjmnUJVNq6dLW9yq7",
+    "rarity": "epic"
+  },
+  "head-tattoo-knife": {
+    "traitSlot": "head-tattoo",
+    "rarity": "legendary",
+    "fileName": "head-tattoo-knife.png",
+    "thumbnailCID": "QmdRx1zgyeVGYn2oeGCHyyMMxa2EjnSJs6TXqJgSypX1Sb"
+  },
+  "background-sky_dusk": {
+    "fileName": "background-sky_dusk.png",
+    "traitSlot": "background",
+    "thumbnailCID": "QmXJNVji3Gxoba45dePj85nHdmtSYsMhq4hcF378P4emvi",
+    "rarity": "epic"
+  },
+  "neck-neck-scarf-blue": {
+    "rarity": "common",
+    "fileName": "neck-neck-scarf-blue.png",
+    "traitSlot": "neck",
+    "thumbnailCID": "QmUx2jG6ysQXNKCZMoeSk2xvMJjF1kmicpwfpprdAKpcL1"
+  },
+  "head-hat-helmet-baseball": {
+    "traitSlot": "head-hat",
+    "rarity": "epic",
+    "fileName": "head-hat-helmet-baseball.png",
+    "thumbnailCID": "QmPSC1YKTVRxf9MvMKb9XPtHuVKCDc6q3cWoMo6hG7GBZr"
+  },
+  "clothes-hoodie-purple": {
+    "rarity": "common",
+    "thumbnailCID": "QmcJ3agJv2JgxDMUwPCZRBYon5LrVoSYMDao4XH9AqTeqK",
+    "traitSlot": "clothes",
+    "fileName": "clothes-hoodie-purple.png"
+  },
+  "clothes-baseball-jersey": {
+    "traitSlot": "clothes",
+    "rarity": "rare",
+    "fileName": "clothes-baseball-jersey.png",
+    "thumbnailCID": "QmSru8wB5M7ETZwTqaqDG642fxzKfnY2w5tkUQGDVHbGLC"
+  },
+  "clothes-hoodie-orange": {
+    "rarity": "common",
+    "traitSlot": "clothes",
+    "fileName": "clothes-hoodie-orange.png",
+    "thumbnailCID": "QmP6hiwiHYJ4xSoVNTif4JiK8am4XSMpEMeQThvbh4oLdU"
+  },
+  "clothes-tshirt-blue": {
+    "rarity": "common",
+    "thumbnailCID": "QmWxxeBQdPG7mXki3ZRWvq4jXCp9Fahi2iBz3G2QbmJCy8",
+    "traitSlot": "clothes",
+    "fileName": "clothes-tshirt-blue.png"
+  },
+  "eyes-hollow": {
+    "fileName": "eyes-hollow.png",
+    "traitSlot": "eyes",
+    "thumbnailCID": "QmauC9YJcQVRn9dy6Z8WXQcHxGMQKGZ5RkHu9nxJaiHmnG",
+    "rarity": "rare"
+  },
+  "clothes-astronaut-suit": {
+    "traitSlot": "clothes",
+    "rarity": "legendary",
+    "fileName": "clothes-astronaut-suit.png",
+    "thumbnailCID": "QmW5Y7QgweTQQWK9Wah17YQS8zwpdYKE2vDFUKFwkLDotk"
+  },
+  "head-hat-hat-do-rag-yellow": {
+    "rarity": "rare",
+    "thumbnailCID": "QmdzxBasxMFmshBnzyx7BnUFr9KY4FCTXBtAma5epD8b88",
+    "fileName": "head-hat-hat-do-rag-yellow.png",
+    "traitSlot": "head-hat"
+  },
+  "head-hat-hat-do-rag-purple": {
+    "traitSlot": "head-hat",
+    "rarity": "rare",
+    "fileName": "head-hat-hat-do-rag-purple.png",
+    "thumbnailCID": "QmYG7MYSaRiKZzi1AhtgdnSAqLMEwNoUfXZddZJwGhxeaF"
+  },
+  "head-hat-hat-do-rag-lime": {
+    "rarity": "rare",
+    "thumbnailCID": "QmRZ7jRSV1FzSzZhm1FYgfh5EzPTzQwFE66oiayoCjHuMf",
+    "fileName": "head-hat-hat-do-rag-lime.png",
+    "traitSlot": "head-hat"
+  },
+  "head-hat-hat-do-rag-grey": {
+    "rarity": "common",
+    "thumbnailCID": "QmPYZCoNqqejCZu24F61eQUCnojWA9qR6J5dzEYzstBMJ2",
+    "traitSlot": "head-hat",
+    "fileName": "head-hat-hat-do-rag-grey.png"
+  },
+  "background-fire_green": {
+    "traitSlot": "background",
+    "rarity": "epic",
+    "fileName": "background-fire_green.png",
+    "thumbnailCID": "QmNNsjuFS4FqHNzTmoQCMj6uaDQ7HYaAyMw9tEktFCqvhA"
+  },
+  "head-hat-hat-skinner": {
+    "traitSlot": "head-hat",
+    "rarity": "epic",
+    "fileName": "head-hat-hat-skinner.png",
+    "thumbnailCID": "QmWKznhe4f6icicCNdq1srLDU5xba4uWkvsqqTFzubDTFp"
+  },
+  "head-hat-hat-baseball-backward-blue": {
+    "rarity": "common",
+    "thumbnailCID": "QmYVe7t2mxi7pPNjSMuoedw9Djc6osvBCRnzBonPtf1i8p",
+    "traitSlot": "head-hat",
+    "fileName": "head-hat-hat-baseball-backward-blue.png"
+  },
+  "head-eyebrow-eyebrow-ring": {
+    "rarity": "epic",
+    "thumbnailCID": "QmQAyX5eS23SFmkQt5Db8xNYnKUmh7ktHvNMbah51HmDjQ",
+    "fileName": "head-eyebrow-eyebrow-ring.png",
+    "traitSlot": "head-eyebrow"
+  },
+  "head-eyes-eyepatch": {
+    "fileName": "head-eyes-eyepatch.png",
+    "traitSlot": "head-eyes",
+    "thumbnailCID": "QmanGnRyV9eP3PYDVYQFC1ucsKHArGqgST6jRfkyiDNLnt",
+    "rarity": "rare"
+  },
+  "background-psychedelic": {
+    "fileName": "background-psychedelic.png",
+    "traitSlot": "background",
+    "thumbnailCID": "QmYNAehCSsaBr2Z6J3RdzGA2efjjsQFFQrWb3uY4hNZ7xW",
+    "rarity": "legendary"
+  },
+  "head-hat-horn-curly-black": {
+    "fileName": "head-hat-horn-curly-black.png",
+    "traitSlot": "head-hat",
+    "thumbnailCID": "QmQPqYmKnyDMTPSFwX2qtSqXgmbJ8Nok8z9k9QyVPESuUj",
+    "rarity": "rare"
+  },
+  "head-hat-halo-ring": {
+    "traitSlot": "head-hat",
+    "rarity": "legendary",
+    "fileName": "head-hat-halo-ring.png",
+    "thumbnailCID": "QmY96krShKzy4Pk82jL6TME4ijobBTMpfuRFt2FArcVmuM"
+  },
+  "head-hat-hat-do-rag-pink": {
+    "traitSlot": "head-hat",
+    "rarity": "rare",
+    "fileName": "head-hat-hat-do-rag-pink.png",
+    "thumbnailCID": "QmandosbeTRPhtbp23YYeEGep7T9EUunGbiQ54xUcfzJw9"
+  },
+  "head-hat-hat-baseball-purple": {
+    "rarity": "common",
+    "fileName": "head-hat-hat-baseball-purple.png",
+    "traitSlot": "head-hat",
+    "thumbnailCID": "QmWBvrycHQ26pM1i78jquwtjyaYe2A4qAJYDRdjnYMBaAY"
+  },
+  "eyes-open-blank": {
+    "rarity": "epic",
+    "thumbnailCID": "QmRy1QyuWW7y2SWAfDhGcPzE71aKQYfG1hDtCs3zM9p9Q5",
+    "fileName": "eyes-open-blank.png",
+    "traitSlot": "eyes"
+  },
+  "head-hat-hat-fedora": {
+    "fileName": "head-hat-hat-fedora.png",
+    "traitSlot": "head-hat",
+    "thumbnailCID": "QmQ48ZxpiV3hcCJkEX5hFisT15DtD8G2y4ebfkCSfkRCmh",
+    "rarity": "epic"
+  },
+  "clothes-vampire": {
+    "traitSlot": "clothes",
+    "rarity": "legendary",
+    "fileName": "clothes-vampire.png",
+    "thumbnailCID": "QmUDfMBfV6oYvNkaMDHCun13wUCvX3BDSemVGRcYHE3NZb"
+  },
+  "head-eyes-blindfold-bloody": {
+    "fileName": "head-eyes-blindfold-bloody.png",
+    "traitSlot": "head-eyes",
+    "thumbnailCID": "QmczzuWAdY6ruZg5RGa5AcTrMqjU7sXRnnQ5n8wkqaezkV",
+    "rarity": "epic"
+  },
+  "head-hat-hat-do-rag-red": {
+    "traitSlot": "head-hat",
+    "rarity": "rare",
+    "fileName": "head-hat-hat-do-rag-red.png",
+    "thumbnailCID": "QmX4ktavnJKxBbeLXQwXVXVeCYd9VtYcKZGLbRXbUz3ENW"
+  },
+  "head-mouth-mask-black": {
+    "traitSlot": "head-mouth",
+    "rarity": "epic",
+    "fileName": "head-mouth-mask-black.png",
+    "thumbnailCID": "Qmerz64EsYHqQ1BGHMrqhFqfksAa59vFVgJw3nfHzAcVJe"
+  },
+  "head-eyes-3d-glasses": {
+    "rarity": "legendary",
+    "thumbnailCID": "QmcRk8DD3zXqJDzBTjYPEfqs7dNmrFPxRq2ynj8aJUGiGD",
+    "fileName": "head-eyes-3d-glasses.png",
+    "traitSlot": "head-eyes"
+  },
+  "head-hat-horn-curly-white": {
+    "rarity": "epic",
+    "thumbnailCID": "QmTd1uq5sLPafkjyJCJxw3cd2pupfqNVn5ePdWKzPPpBTX",
+    "fileName": "head-hat-horn-curly-white.png",
+    "traitSlot": "head-hat"
+  },
+  "clothes-turtleneck-jobs": {
+    "traitSlot": "clothes",
+    "rarity": "legendary",
+    "fileName": "clothes-turtleneck-jobs.png",
+    "thumbnailCID": "QmeEegLRxM6gsgpXXuNJJo1H9zm9y4npvTCmZfkLm4ovEV"
+  },
+  "background-sky_day": {
+    "rarity": "rare",
+    "thumbnailCID": "QmbHyyvoDGWUrtvwhNQBex3kEW2rMKyjG6qzb7vr11zgLL",
+    "fileName": "background-sky_day.png",
+    "traitSlot": "background"
+  },
+  "head-hat-hat-crown": {
+    "fileName": "head-hat-hat-crown.png",
+    "traitSlot": "head-hat",
+    "thumbnailCID": "QmZjQCshKTYYuwrXMMC5n8753b3fGNYtFJhommKTE5ppuN",
+    "rarity": "legendary"
+  },
+  "head-hat-hat-tophat": {
+    "traitSlot": "head-hat",
+    "rarity": "epic",
+    "fileName": "head-hat-hat-tophat.png",
+    "thumbnailCID": "QmZpZjWZY4pw28gKsaJ8dE1wE44fLu2kJeSG9FKKMHo6XG"
+  },
+  "head-ears-earring-cross": {
+    "rarity": "legendary",
+    "thumbnailCID": "QmPYS1CXB8Sx4PuKrtbpoVatkV2zTNK9tk5khZPa6vWP8Q",
+    "fileName": "head-ears-earring-cross.png",
+    "traitSlot": "head-ears"
+  },
+  "background-fire": {
+    "rarity": "rare",
+    "thumbnailCID": "QmcbhjP4EwiXwcrFdh8ns19HV5UmPUewgevPKi5zJDCNkW",
+    "fileName": "background-fire.png",
+    "traitSlot": "background"
+  },
+  "clothes-meat-gaga": {
+    "fileName": "clothes-meat-gaga.png",
+    "traitSlot": "clothes",
+    "thumbnailCID": "QmcgTJ1C4CqRuWb2BLvR8bUprHh72G9rwWY6qoYobF54w1",
+    "rarity": "legendary"
+  },
+  "neck-neck-boxing-gloves": {
+    "traitSlot": "neck",
+    "rarity": "legendary",
+    "fileName": "neck-neck-boxing-gloves.png",
+    "thumbnailCID": "QmdFK2M3NpUPeTdMbLH97Ef7BxLn1RFjCz3XxqZFktNEup"
+  },
+  "clothes-suit-tuxedo": {
+    "traitSlot": "clothes",
+    "rarity": "epic",
+    "fileName": "clothes-suit-tuxedo.png",
+    "thumbnailCID": "QmSWKc1pU7jdvzZV367r1bCCFNmsgcedkVJGUAuU5zjEDs"
+  },
+  "head-hat-horn-unicorn-blue": {
+    "traitSlot": "head-hat",
+    "rarity": "epic",
+    "fileName": "head-hat-horn-unicorn-blue.png",
+    "thumbnailCID": "QmfKXhdhQjwSbZVyMmwgabwE2FBESP8pthcTUaSAcp4SSr"
+  },
+  "eyes-open-glow-psychedelic": {
+    "rarity": "legendary",
+    "thumbnailCID": "QmZgM7yA6jRV3nq2uX69a7paYs5xaw2FyLRQbM9Mey5h58",
+    "fileName": "eyes-open-glow-psychedelic.png",
+    "traitSlot": "eyes"
+  },
+  "clothes-thriller-mj": {
+    "traitSlot": "clothes",
+    "rarity": "legendary",
+    "fileName": "clothes-thriller-mj.png",
+    "thumbnailCID": "QmTnbd7DFcLA2eFT3ymSsjrtbDrV8Y6sRG2h1EZfF8A6i3"
+  },
+  "head-hat-eye-third": {
+    "rarity": "legendary",
+    "thumbnailCID": "QmVkRWphh5HbSVcVvrJdZ5ppARK6MZRwfNGuexUSAT9EUW",
+    "fileName": "head-hat-eye-third.png",
+    "traitSlot": "head-hat"
+  },
+  "background-psychedelic2": {
+    "fileName": "background-psychedelic2.png",
+    "traitSlot": "background",
+    "thumbnailCID": "QmbzHee5PSWGSpkcYnySL1STycERrqaPWWepxbW6cBfAoR",
+    "rarity": "legendary"
+  },
+  "head-hat-horn-unicorn-pink": {
+    "rarity": "legendary",
+    "thumbnailCID": "QmQUpGNtBY4ym8gjNFeGRCbRomUzbJnW492qLcfu9hySf2",
+    "fileName": "head-hat-horn-unicorn-pink.png",
+    "traitSlot": "head-hat"
+  },
+  "clothes-elvis": {
+    "traitSlot": "clothes",
+    "rarity": "legendary",
+    "fileName": "clothes-elvis.png",
+    "thumbnailCID": "QmZgPPgkKjpe8uRqDEDC8PbjY2Hi83zwrv7VegFH6YGE7U"
+  },
+  "body-accessory-back-samurai-sword": {
+    "traitSlot": "body-accessory",
+    "rarity": "legendary",
+    "fileName": "body-accessory-back-samurai-sword.png",
+    "thumbnailCID": "QmPRMjRPhsvb8euEgv8YKExFWDYmorTAxhofLsKVCxtLat"
+  },
+  "clothes-basketball-lebron": {
+    "fileName": "clothes-basketball-lebron.png",
+    "traitSlot": "clothes",
+    "thumbnailCID": "QmaCbB7gTj2iQdub1GGqt7XKCFew64XZJBxEki2Y324z82",
+    "rarity": "legendary"
+  },
+  "head-hat-dreadlocks-bob-marley": {
+    "fileName": "head-hat-dreadlocks-bob-marley.png",
+    "traitSlot": "head-hat",
+    "thumbnailCID": "QmY6ns7NzU9QzVJZzNXn8WJ3iiLXSZKjGTPhP4R3GLzHMN",
+    "rarity": "legendary"
+  },
+  "head-hat-arrow-impaled": {
+    "fileName": "head-hat-arrow-impaled.png",
+    "traitSlot": "head-hat",
+    "thumbnailCID": "QmY7ZKzfBetMrPWKRUuwFAxfim15GkyNnmdgR8tXBu5hGU",
+    "rarity": "legendary"
+  },
+  "mouths-joint": {
+    "rarity": "legendary",
+    "thumbnailCID": "QmdLXjNiBjSDQCnkoNiic9th1wGAk6pastEKd97MnkxP8u",
+    "fileName": "mouths-joint.png",
+    "traitSlot": "mouths"
+  }
+}
