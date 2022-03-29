@@ -61,6 +61,7 @@ export const GoatName = styled.h3`
 export const Row = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 100%;
 `;
 
 export const Left = styled.div`
