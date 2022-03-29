@@ -1,6 +1,7 @@
 import React from "react";
 import { SingleGoadexGoat } from "../Goadex";
-import { Header } from "./Header";
+import { GlobalStyle } from "../Components";
+import styled from "styled-components";
 
 export default {
   title: "Goadex/Goat",
@@ -11,11 +12,23 @@ export default {
   },
 };
 
-const Template = (args) => <SingleGoadexGoat {...args} />;
+const GoadexGallery = styled.div`
+  display: grid;
+  margin: 20px;
+  grid-template-columns: repeat(4, 300px);
+  gap: 10px;
+`;
+
+const Template = (args) => (
+  <GoadexGallery>
+    <GlobalStyle />
+    <SingleGoadexGoat {...args} />
+  </GoadexGallery>
+);
 
 export const Collected = Template.bind({});
 Collected.args = {
-  name: "Brown",
+  amount: 5,
   skin: {
     meta: {
       thumbnailCID: "QmPDF2dGa8HMKhdYxHQviU5GhoHDS8bT6m3EjuAQJR4PS4",
@@ -30,4 +43,17 @@ Collected.args = {
 };
 
 export const NotCollected = Template.bind({});
-NotCollected.args = {};
+NotCollected.args = {
+  amount: 0,
+  skin: {
+    meta: {
+      thumbnailCID: "QmPDF2dGa8HMKhdYxHQviU5GhoHDS8bT6m3EjuAQJR4PS4",
+      compositeSkinBodyFileName: "skin-body-body-green.png",
+      compositeSkinHeadCID: "QmWXBYM197sBnWW8fjZn2jReqTq2cUni3wqaEzeDoHc3WM",
+      skinRarity: "common",
+      compositeSkinHeadFileName: "head-head-green.png",
+      skinFileName: "skin-green.png",
+      compositeSkinBodyCID: "Qmc1FjEdhcwqGG3FRLR574n7sSJQDtch8fr3whPUUzCx5z",
+    },
+  },
+};
