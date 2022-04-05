@@ -1,6 +1,7 @@
 import Parse from "parse/node";
 import { PARSE_ID, JS_KEY } from "./keys";
-import { request, gql } from "graphql-request";
+import { GraphQLClient, request, gql } from "graphql-request";
+import dot from "dotenv"
 
 const initParse = () => {
   Parse.initialize(PARSE_ID, JS_KEY);
@@ -9,42 +10,58 @@ const initParse = () => {
 };
 
 const VOUCHER_EVENT = "A.2068315349bdfce5.GoatedGoatsManager.RedeemGoatVoucher";
-const FLOWSCAN_GRAPHQL_ENDPOINT = "https://flowscan.org/query";
-const query = gql`
-  query GetEvents($limit: Int, $offset: Int) {
-    contract(id: "A.2068315349bdfce5.GoatedGoatsManager") {
-      id
-      interactions(limit: $limit, offset: $offset) {
-        count
-        edges {
-          node {
-            events(
-              type: [
-                ${VOUCHER_EVENT}
-              ]
-            ) {
-              edges {
-                node {
-                  fields
-                  eventType {
-                    fullId
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// const FLOWSCAN_GRAPHQL_ENDPOINT = "https://flowscan.org/query";
+const FLOWSCAN_GRAPHQL_ENDPOINT = "https://query.flowgraph.co";
 
 const fetchEvents = async () => {
-  const result = await request(FLOWSCAN_GRAPHQL_ENDPOINT, query, {
-    limit: 10,
+  const query = gql`
+      query GetEvents($limit: Int, $offset: Int) {
+          contract(id: "A.2068315349bdfce5.GoatedGoatsManager") {
+              id
+              interactions(limit: $limit, offset: $offset) {
+                  count
+                  edges {
+                      node {
+                          events(
+                              type: [
+                                  ${VOUCHER_EVENT}
+                              ]
+                          ) {
+                              edges {
+                                  node {
+                                      fields
+                                      eventType {
+                                          fullId
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  `;
+
+  const gqlClient = new GraphQLClient(FLOWSCAN_GRAPHQL_ENDPOINT)
+
+  /*  const result = await request(FLOWSCAN_GRAPHQL_ENDPOINT, query, {
+    limit: 100,
     offset: 0,
-  });
-  if (result) {
+  });*/
+  const requestHeaders = {
+    authorization: `Bearer ${process.env.TOKEN}`,
+  }
+  try{
+    const result = await gqlClient.request(query, {
+      limit: 100,
+      offset: 0
+    }, requestHeaders)
+    console.log({ result })
+  } catch (e){
+    console.error(e)
+  }
+/*  if (result) {
     const {
       contract: { interactions },
     } = result;
@@ -68,10 +85,13 @@ const fetchEvents = async () => {
         }
       }
     }
-  }
+  }*/
 };
 
 (async () => {
+  dot.config();
+  console.log(process.env.TOKEN)
+  await fetchEvents();
   // initParse();
-  console.log("Events handler!");
+  // console.log("Events handler!");
 })();
