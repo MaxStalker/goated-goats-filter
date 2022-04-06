@@ -8,6 +8,7 @@
     "preview": "vite preview",
     "scrap": "node ./scrapper/index.js",
     "parse-events": "node ./scrapper events",
+    "fetch-flowscan-events": "node ./scrapper flowscan-events",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
