@@ -1,17 +1,22 @@
-query Basic {
-  contract(id: "A.2068315349bdfce5.GoatedGoatsManager") {
-    interactions(heightFrom: 27277434) {
-      edges {
-        node {
-          events {
-            edges {
-              node {
-                fields
-              }
-            }
-          }
-        }
-      }
+fragment Edge on EventConnection {
+  pageInfo {
+    hasNextPage
+    endCursor
+  }
+  edges {
+    cursor
+    node {
+      time
+      fields
     }
+  }
+}
+query GoatedGoatsManager {
+  events(
+    first: 10 # Global hard-limit for now
+    ordering: Ascending
+    typeId: "A.2068315349bdfce5.GoatedGoatsManager.RedeemGoatVoucher"
+  ) {
+    ...Edge
   }
 }
