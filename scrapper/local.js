@@ -383,5 +383,5 @@ const gatherTraitsData = async () => {
   await extendEnvironment(GoatedGoatsEnvironment);
 
   await gatherSkinData();
-  // await gatherTraitsData();
+  await gatherTraitsData();
 })();
