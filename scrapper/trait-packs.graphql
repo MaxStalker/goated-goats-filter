@@ -1,0 +1,30 @@
+fragment Interaction on TransactionConnection {
+    pageInfo {
+        hasNextPage
+        endCursor
+    }
+    edges {
+        node {
+            time
+            events {
+                edges {
+                    node {
+                        type {
+                            id
+                            name
+                        }
+                        fields
+                    }
+                }
+            }
+        }
+    }
+}
+
+query TraitPacks {
+  contract(id: "A.2068315349bdfce5.GoatedGoatsManager") {
+    interactions(first: 50) {
+        ...Interaction
+    }
+  }
+}
