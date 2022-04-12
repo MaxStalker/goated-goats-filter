@@ -25,3 +25,4 @@ dist-ssr
 
 # Keys and password
 ./scrapper/keys.js
+.env
