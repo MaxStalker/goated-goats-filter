@@ -1,5 +1,5 @@
-export default function Home(props){
-  return(
-    <div>Fetch Account</div>
-  )
+import {Navigate} from "react-router-dom";
+
+export default function Home(){
+  return <Navigate to="/rarity/goats"/>
 }
