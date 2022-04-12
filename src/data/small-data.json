@@ -3,7 +3,7 @@
     "skins": {
       "zebra": {
         "meta": {
-          "thumbnailCID": "QmWxg7YymcNubURK4DjMbgYDiFhvaMdMpaUtCpMNjUoqt2",
+          "thumbnailCID": "QmSgKsE7WUCqG4cEXeyXmBFPX4k9QXDpRPe8mEUjd2ZERt",
           "compositeSkinBodyFileName": "skin-body-body-zebra.png",
           "compositeSkinHeadCID": "QmeX6LUD5Y7p45nnY4jpZDpW8nxyBwEzBh4RkFGnGP7gtP",
           "skinRarity": "rare",
@@ -199,7 +199,7 @@
       },
       "giraffe": {
         "meta": {
-          "thumbnailCID": "QmRkLhSdK5goprBXGXVaxFKJJ7cE5YdBSiUN2uQ5jS7jVj",
+          "thumbnailCID": "QmchufWbneRdsFneiZrGZt4EtW9HQNBc39D15TPAo4F6ji",
           "compositeSkinBodyFileName": "skin-body-body-giraffe.png",
           "compositeSkinHeadCID": "QmQqSfwq9fduhtgJaam5XyonpAUCj1NLuQ3HcZP9Np3iU8",
           "skinRarity": "epic",
@@ -2117,6 +2117,7 @@
         3501,
         3516,
         3521,
+        3531,
         3538,
         3543,
         3544,
@@ -3436,6 +3437,7 @@
         3333,
         3368,
         3448,
+        3531,
         3538,
         3805,
         3837,
@@ -6796,6 +6798,7 @@
           2917,
           2996,
           3333,
+          3531,
           3805,
           3837,
           4284,
@@ -9049,7 +9052,7 @@
         ]
       }
     },
-    "totalCount": 2871
+    "totalCount": 2872
   },
   "traits": {
     "imageData": {

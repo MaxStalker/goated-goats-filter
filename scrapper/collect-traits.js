@@ -10,6 +10,8 @@ import { readDB, writeDB } from "./db";
     };
     return acc;
   }, {});
+  console.log({traitList})
 
+  console.log("Done!")
   writeDB("./src/data/trait-list.json", traitList)
 })();

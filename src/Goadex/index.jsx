@@ -73,7 +73,6 @@ export default function Goadex(props) {
   const equippedTraitsData = goats.reduce((acc, goat) => {
     const { equippedTraits } = goat;
     if (equippedTraits.length > 0) {
-      console.log({ equippedTraits });
       equippedTraits.forEach((trait) => {
         const { metadata } = trait;
         if (!acc[metadata.fileName]) {
@@ -89,8 +88,6 @@ export default function Goadex(props) {
     return acc;
   }, {});
 
-  console.log({ equippedTraitsData });
-
   const traitsData = traits.reduce((acc, trait) => {
     const key = trait.metadata.fileName;
     if (!acc[key]) {
@@ -103,8 +100,6 @@ export default function Goadex(props) {
     }
     return acc;
   }, {});
-
-  console.log(traitsData);
 
   const skinList = Object.keys(skins).sort((a, b) => {
     const aScore = getRarityScore(skins[a].meta.skinRarity);
@@ -186,6 +181,8 @@ export default function Goadex(props) {
 
     return 0;
   });
+
+  console.log({ traitList })
 
   return (
     <>

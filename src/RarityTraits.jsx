@@ -27,7 +27,6 @@ import { getRarityScore } from "flow-cadut/views/src/GoatedGoats/utils";
 
 const RarityDisplay = () => {
   const { traits, goats } = data;
-  console.log(traits);
   const { byType, imageData, totalCount, bySlot, byRarity } = traits;
   const types = Object.keys(byType);
   const sorted = types
