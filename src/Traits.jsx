@@ -30,6 +30,7 @@ export default function Traits(props) {
 
         return (
           <Trait
+            id={item.id}
             key={item.id}
             trait={{...item, price}}
             onClick={onClick}

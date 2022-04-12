@@ -8,6 +8,7 @@ import {
   Values,
   RarityContainer,
   Rarity,
+  IdDisplay
 } from "../Goat/components";
 import {
   Container as Slot,
@@ -17,15 +18,16 @@ import {
   SilhouetteHead,
 } from "../Slot/components";
 import { getElevation, getImage, getTraitName } from "../../utils";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function Trait(props) {
-  const { onClick, trait, selected } = props;
+  const { owner } = useParams();
+  const { onClick, trait, selected, id, url } = props;
   const { metadata, image, rarityScore, price } = trait;
   const { traitSlot, fileName, rarity } = metadata;
 
   const imageAlt = "";
-  const to = "/";
+  const to = url || `/owners/${owner}/trait/${id}`;
   const title = getTraitName(fileName, traitSlot);
   const elevate = getElevation(traitSlot);
   const src = getImage(traitSlot);
@@ -61,9 +63,10 @@ export default function Trait(props) {
             <Value>{price}</Value>
           </ValueDisplay>
         </Values>
+        <IdDisplay>Id: <b>{id}</b></IdDisplay>
       </Content>
       <RarityContainer rarity={rarity}>
-        <Link to={to}>
+        <Link to={to} target="_blank">
           <Rarity rarity={rarity} className="pill">
             <label className={"rarity"}>
               {rarity} {rarityScore}

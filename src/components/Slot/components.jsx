@@ -101,7 +101,7 @@ export const SilhouetteHead = styled.img.attrs((props) => ({
   z-index: 2;
 `;
 
-export const TraitName = styled.p`
+export const TraitName = styled.div`
   font-weight: bold;
   font-size: 1.2em;
   margin-bottom: 0.25em;
@@ -112,4 +112,4 @@ export const Content = styled.div`
   padding-bottom: 0;
 `;
 
-export const TraitScore = styled.p``;
+export const TraitScore = styled.div``;

@@ -79,9 +79,20 @@ export const Content = styled.div`
   grid-template-rows: ${({ trait }) =>
     trait ? "30px 60px" : "30px 90px auto"};
 `;
+
+export const IdDisplay = styled.div`
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  color: #ccc;
+  text-align: center;
+`
+
 export const Values = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: ${({num=2}) => `repeat(${num}, 1fr)`};
   margin-bottom: ${({ mb = 0 }) => mb};
 `;
 export const ValueDisplay = styled.div`
