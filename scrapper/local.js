@@ -203,8 +203,7 @@ const getTraitData = (start, finish) => {
     limit: 9999,
   });
 };
-const getFullTraitData = async () => {
-  const step = 5000;
+const getFullTraitData = async (step = 5000) => {
   const resulted = await Promise.all([
     await getTraitData(step * 0, step * 1),
     await getTraitData(step * 1, step * 2),
@@ -212,6 +211,8 @@ const getFullTraitData = async () => {
     await getTraitData(step * 3, step * 4),
     await getTraitData(step * 4, step * 5),
     await getTraitData(step * 5, step * 6),
+    await getTraitData(step * 6, step * 7),
+    await getTraitData(step * 7, step * 8),
   ]).then((values) => {
     let t = [];
 
@@ -226,7 +227,7 @@ const getFullTraitData = async () => {
 };
 const gatherTraitsData = async () => {
   console.log("Gathering traits data....");
-  const rawData = await getFullTraitData(100);
+  const rawData = await getFullTraitData();
 
   const fixedData = rawData.reduce(
     (acc, item) => {
