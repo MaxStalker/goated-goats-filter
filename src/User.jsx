@@ -104,6 +104,7 @@ export default function User() {
         <Route path="goats" element={<Goats goats={sortedGoats} />} />
         <Route path="traits" element={<Traits traits={sortedTraits} />} />
         <Route path="collector" element={<Collector traits={sortedTraits} goats={sortedGoats}/>} />
+        <Route path="goadex" element={<Navigate to="../collector"/>} />
         <Route
           path="/goat/:goatId"
           element={<SingleGoat data={goatsDictionary} />}
