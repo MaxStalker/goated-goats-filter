@@ -910,5 +910,35 @@
     "thumbnailCID": "QmdLXjNiBjSDQCnkoNiic9th1wGAk6pastEKd97MnkxP8u",
     "fileName": "mouths-joint.png",
     "traitSlot": "mouths"
+  },
+  "clothes-ukraine-jersey": {
+    "thumbnailCID": "QmREk44SsZz8wVdoTd12ghDhXvRLvMnBs4L3VEkyBvYDy9",
+    "fileName": "clothes-ukraine-jersey.png",
+    "rarity": "rare",
+    "traitSlot": "clothes"
+  },
+  "clothes-flowverse-hoodie-red": {
+    "thumbnailCID": "QmPoRVN7bekGwJwnUSiF7F66rbzqzS3L4eGBm79wKucSqf",
+    "fileName": "clothes-flowverse-hoodie-red.png",
+    "rarity": "rare",
+    "traitSlot": "clothes"
+  },
+  "clothes-flowverse-hoodie-black": {
+    "thumbnailCID": "Qmf39aFgCBuueSJdgwpgjWd4MxnpF2jAfWy8ous3eUbMWX",
+    "fileName": "clothes-flowverse-hoodie-black.png",
+    "rarity": "rare",
+    "traitSlot": "clothes"
+  },
+  "clothes-flowverse-hoodie-blue": {
+    "thumbnailCID": "QmWx6ZN1F7ZYnZRe7vPa4qe7hV9NoqcgWt3p8LCzvdm22E",
+    "fileName": "clothes-flowverse-hoodie-blue.png",
+    "rarity": "rare",
+    "traitSlot": "clothes"
+  },
+  "clothes-flowverse-hoodie-purple": {
+    "thumbnailCID": "QmcCRFAJ5D1gzTLxExF8epmkS4UUeCzYX4Lyz18eprnVSy",
+    "fileName": "clothes-flowverse-hoodie-purple.png",
+    "rarity": "rare",
+    "traitSlot": "clothes"
   }
 }
