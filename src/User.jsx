@@ -13,7 +13,7 @@ import SingleTrait from "./SingleTrait";
 import { PricesContext } from "./context/prices";
 import PriceChart from "./components/PriceChart";
 import { setup } from "./utils/setup";
-import Goadex from "./Goadex";
+import Collector from "./Collector";
 
 export default function User() {
   const { owner } = useParams();
@@ -94,8 +94,8 @@ export default function User() {
         <Tab active={pathname.includes("/traits")}>
           <Link to={"traits"}>Traits</Link>
         </Tab>
-        <Tab active={pathname.includes("/goadex")}>
-          <Link to={"goadex"}>Goadex</Link>
+        <Tab active={pathname.includes("/collector")}>
+          <Link to={"collector"}>Collector</Link>
         </Tab>
       </Tabs>
       <PriceChart />
@@ -103,7 +103,7 @@ export default function User() {
       <Routes>
         <Route path="goats" element={<Goats goats={sortedGoats} />} />
         <Route path="traits" element={<Traits traits={sortedTraits} />} />
-        <Route path="goadex" element={<Goadex traits={sortedTraits} goats={sortedGoats}/>} />
+        <Route path="collector" element={<Collector traits={sortedTraits} goats={sortedGoats}/>} />
         <Route
           path="/goat/:goatId"
           element={<SingleGoat data={goatsDictionary} />}

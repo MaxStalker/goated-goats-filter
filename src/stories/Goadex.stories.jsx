@@ -1,10 +1,10 @@
 import React from "react";
-import { SingleGoadexGoat } from "../Goadex";
+import { SingleGoadexGoat } from "../Collector";
 import { GlobalStyle } from "../Components";
 import styled from "styled-components";
 
 export default {
-  title: "Goadex/Goat",
+  title: "Collector/Goat",
   component: SingleGoadexGoat,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
